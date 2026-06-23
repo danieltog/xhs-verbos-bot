@@ -245,7 +245,11 @@ async def generate_verbo_video(verbo: str):
                 if conj:
                     palabras = []
                     for row in conj:
-                        persona = row.get("persona", "").replace("/", ", ")
+                        persona = row.get("persona", "")
+                        # Fix gendered slashes: vosotros/as → vosotros, vosotras
+                        persona = re.sub(r'(\w+)os/as\b', r'\1os, \1as', persona)
+                        # Fix remaining slashes: él/ella → él, ella
+                        persona = persona.replace("/", ", ")
                         forma = row.get("forma", "")
                         if persona and forma:
                             palabras.append({"es": f"{persona}, {forma}", "zh": row.get("pronombre", "")})
