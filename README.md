@@ -1,4 +1,4 @@
-# 动词西班牙语 · xhs-verbos-bot
+# Hola西班牙语 · Verbos
 
 Generador de videos educativos para Xiaohongshu/TikTok enfocado en **conjugación de verbos españoles por frecuencia de uso**.
 

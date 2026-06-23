@@ -83,7 +83,7 @@ _FS_ORIG = dict(FS)  # never-modified originals
 LS = {"tight": 4, "norm": 10, "wide": 16, "hero": 22}
 _LS_ORIG = dict(LS)  # never-modified originals
 
-BRAND = "动词西班牙语"
+BRAND = "Hola西班牙语"
 LOGO_PATH = None
 
 # ═══════════════════════════════════════════════
@@ -251,7 +251,7 @@ def render_portada(slide):
 
     # Badge
     bd = _font(FS["small"])
-    d.text((W - MX, MY), "动词西班牙语 · Verbos",
+    d.text((W - MX, MY), "Hola西班牙语 · Verbos",
            fill=CLR["gold"], font=bd, anchor="rt")
 
     # Chapter number (below badge)
@@ -595,7 +595,7 @@ def render_outro(slide):
     d.text((W // 2, H // 2 + 60), "Like & Subscribe",
            fill=CLR["gray"], font=sf, anchor="mt")
     d.text((W // 2, H - MB),
-           "动词西班牙语 · Un verbo al día",
+           "Hola西班牙语 · Un verbo al día",
            fill=CLR["gray"], font=sf, anchor="mb")
     return img
 
@@ -704,7 +704,7 @@ def render_xiaohongshu_portada(slide):
 
     # ── Top badge ──
     bd = _font(FS["small"])
-    badge_text = "动词西班牙语 · Verbos"
+    badge_text = "Hola西班牙语 · Verbos"
     badge_w = bd.getbbox(badge_text)[2] + 30
     _card(d, MX, MY - 5, badge_w, 50, radius=20, fill=(0, 0, 0, 180))
     d.text((MX + 15, MY + 8), badge_text, fill=(255, 200, 50), font=bd)

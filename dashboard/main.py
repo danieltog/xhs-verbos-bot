@@ -25,7 +25,7 @@ from src.tts_engine import generate_slide_audio
 from src.video_composer import compose_video_with_subtitles
 from src.xhs_description import generate_and_save as gen_xhs_desc
 
-app = FastAPI(title="动词西班牙语 · Verbos")
+app = FastAPI(title="Hola西班牙语 · Verbos")
 
 static_dir = Path(__file__).parent / "static"
 static_dir.mkdir(exist_ok=True)
