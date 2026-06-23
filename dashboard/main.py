@@ -32,7 +32,7 @@ from src.video_composer import compose_video, compose_video_with_subtitles, prev
 
 sys.path.insert(0, str(PROJECT_ROOT))
 
-app = FastAPI(title="Hola西班牙语 · DELE Video Bot")
+app = FastAPI(title="动词西班牙语 · Verbos")
 
 static_dir = Path(__file__).parent / "static"
 static_dir.mkdir(exist_ok=True)

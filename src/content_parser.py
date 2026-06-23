@@ -32,7 +32,7 @@ class VideoScript:
     @property
     def filename_base(self) -> str:
         safe = re.sub(r'[^a-zA-Z0-9\u4e00-\u9fff]+', '_', self.tema)
-        return f"DELE_{self.nivel}_{safe}"
+        return f"Verbos_{self.nivel}_{safe}"
 
 
 def _extract_capitulo(path: str | Path) -> int | None:
