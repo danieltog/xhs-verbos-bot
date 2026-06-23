@@ -70,14 +70,20 @@ async function selectVerbo(verbo) {
 // EDITOR RENDERING
 // ═══════════════════════════════════════════
 
+function cleanTTS(text) {
+  // Remove Latin words from Chinese TTS text to avoid mixed-language pronunciation
+  return (text || '').replace(/\b[A-Za-záéíóúüñÁÉÍÓÚÜÑ]+\b/g, '').replace(/\s+/g, ' ').trim();
+}
+
 function renderEditor() {
   const d = currentData;
   const slides = d.slides || [];
   const slide = slides.length > 0 ? slides[currentSlideIdx] : null;
 
-  // Find conjugation slide
   const conjSlide = slides.find(s => s.tipo === 'conjugacion');
   const ejemplos = slides.filter(s => s.tipo === 'ejemplo');
+  const portada = slides.find(s => s.tipo === 'portada') || {};
+  const outro = slides.find(s => s.tipo === 'outro') || {};
 
   let html = '';
 
@@ -86,17 +92,27 @@ function renderEditor() {
   html += `<div class="meta">${d.traduccion_zh || ''} · Frecuencia #${d.frecuencia || '?'} · ${d.nivel || 'A1'}</div>`;
 
   // ── Slide tabs ──
-  if (slides.length > 0) {
-    html += '<div class="slide-tabs">';
-    slides.forEach((s, i) => {
-      const labels = {portada: '📔 Portada', conjugacion: '📊 Conjugación', ejemplo: '💬 Ejemplo', outro: '🏁 Outro'};
-      const label = labels[s.tipo] || s.tipo;
-      html += `<span class="slide-tab ${i === currentSlideIdx ? 'active' : ''}" onclick="switchSlide(${i})">${label}</span>`;
-    });
-    html += '</div>';
-  }
+  html += '<div class="slide-tabs">';
+  const labels = {portada: '📔 Portada', conjugacion: '📊 Conjugación', ejemplo: '💬 Ejemplo', outro: '🏁 Outro'};
+  slides.forEach((s, i) => {
+    const n = s.tipo === 'ejemplo' ? `Ej ${ejemplos.indexOf(s)+1}` : labels[s.tipo] || s.tipo;
+    html += `<span class="slide-tab ${i === currentSlideIdx ? 'active' : ''}" onclick="switchSlide(${i})">${n}</span>`;
+  });
+  html += '</div>';
 
-  // ── Conjugation table ──
+  // ── Portada ──
+  html += '<div class="section">';
+  html += '<h4>📔 Portada</h4>';
+  html += `<div class="form-row"><label>Título ES</label><input value="${esc(portada.titulo_es || `Verbo ${d.verbo.toUpperCase()}`)}" onchange="updateField('titulo_es', this.value)"></div>`;
+  html += `<div class="form-row"><label>Título ZH</label><input value="${esc(portada.titulo_zh || `动词 ${d.verbo.toUpperCase()}`)}" onchange="updateField('titulo_zh', this.value)"></div>`;
+  html += `<div class="form-row"><label>Badge</label><input value="${esc(portada.badge || 'Hola西班牙语 · Verbos')}" onchange="updateField('badge', this.value)"></div>`;
+  html += `<div class="form-row"><label>Capítulo</label><input value="${esc(portada.capitulo_texto || `第${String(d.capitulo || d.frecuencia || 1).padStart(3,'0')}课`)}" onchange="updateField('capitulo_texto', this.value)"></div>`;
+  // TTS for portada — Chinese only, no Spanish words
+  const ttsDef = cleanTTS(portada.titulo_zh || `动词 ${d.verbo.toUpperCase()}`);
+  html += `<div class="form-row"><label>TTS ZH<span class="tts-label">🎤</span></label><input class="tts-field" value="${esc(portada.texto_tts_zh || ttsDef)}" onchange="updateField('texto_tts_zh', this.value)" placeholder="Solo texto chino para TTS"></div>`;
+  html += '</div>';
+
+  // ── Conjugación ──
   const conj = conjSlide ? (conjSlide.conjugacion || []) : [];
   html += '<div class="section">';
   html += '<h4>📊 Conjugación · Presente</h4>';
@@ -112,44 +128,41 @@ function renderEditor() {
       <td><input class="forma" value="${esc(entry.forma || '')}" data-conj="${i}" data-field="forma" onchange="updateConj()"></td>
     </tr>`;
   });
-  html += '</table></div>';
+  html += '</table>';
+  // TTS hint for conjugation
+  html += `<div class="form-row"><label>TTS ZH<span class="tts-label">🎤</span></label><input class="tts-field" value="${esc(conjSlide?.texto_tts_zh || '')}" onchange="updateField('conj_tts_zh', this.value)" placeholder="Auto: leerá cada fila si se deja vacío"></div>`;
+  html += '</div>';
 
-  // ── Examples ──
+  // ── Ejemplos (dinámicos) ──
   html += '<div class="section">';
-  html += '<h4>💬 Ejemplos</h4>';
-  for (let i = 0; i < 3; i++) {
-    const ej = ejemplos[i] || {frase_es: '', traduccion_zh: ''};
+  html += '<h4>💬 Ejemplos <span style="font-size:10px;color:var(--text2)">(' + ejemplos.length + ')</span></h4>';
+  html += '<div id="ejemplosContainer">';
+  ejemplos.forEach((ej, i) => {
     html += `<div class="example-row">
       <span class="num">${i+1}</span>
       <input class="es" value="${esc(ej.frase_es || '')}" placeholder="Frase en español" data-ej="${i}" data-field="es" onchange="updateEjemplo()">
       <input class="zh" value="${esc(ej.traduccion_zh || '')}" placeholder="Traducción al chino" data-ej="${i}" data-field="zh" onchange="updateEjemplo()">
+      <button class="del-ej" onclick="removeEjemplo(${i})" title="Eliminar">×</button>
     </div>`;
-  }
+  });
   html += '</div>';
-
-  // ── Portada info ──
-  const portada = slides.find(s => s.tipo === 'portada') || {};
-  html += '<div class="section">';
-  html += '<h4>📔 Portada</h4>';
-  html += `<div class="form-row"><label>Título ES</label><input value="${esc(portada.titulo_es || `Verbo ${d.verbo.toUpperCase()}`)}" onchange="updateField('titulo_es', this.value)"></div>`;
-  html += `<div class="form-row"><label>Título ZH</label><input value="${esc(portada.titulo_zh || `动词 ${d.verbo.toUpperCase()}`)}" onchange="updateField('titulo_zh', this.value)"></div>`;
-  html += `<div class="form-row"><label>Badge</label><input value="${esc(portada.badge || 'Hola西班牙语 · Verbos')}" onchange="updateField('badge', this.value)" placeholder="Hola西班牙语 · Verbos"></div>`;
-  html += `<div class="form-row"><label>Capítulo</label><input value="${esc(portada.capitulo_texto || `第${String(d.capitulo || d.frecuencia || 1).padStart(3,'0')}课`)}" onchange="updateField('capitulo_texto', this.value)" placeholder="第001课"></div>`;
+  html += '<button class="btn-add" onclick="addEjemplo()">+ Agregar ejemplo</button>';
+  // TTS hint for examples
+  html += `<div class="form-row" style="margin-top:8px"><label>TTS ES<span class="tts-label">🎤</span></label><input class="tts-field" value="${esc(ejemplos[0]?.texto_tts_es || '')}" onchange="updateField('ej_tts_es', this.value)" placeholder="Auto: usa frase_es si se deja vacío"></div>`;
   html += '</div>';
 
   // ── Outro ──
-  const outro = slides.find(s => s.tipo === 'outro') || {};
   html += '<div class="section">';
   html += '<h4>🏁 Outro</h4>';
   html += `<div class="form-row"><label>ZH</label><input value="${esc(outro.titulo_zh || `今天学了 ${d.verbo.toUpperCase()}！`)}" onchange="updateField('outro_zh', this.value)"></div>`;
   html += `<div class="form-row"><label>ES</label><input value="${esc(outro.titulo_es || `¡Hoy aprendiste ${d.verbo.toUpperCase()}!`)}" onchange="updateField('outro_es', this.value)"></div>`;
-  html += `<div class="form-row"><label>CTA</label><input value="${esc(outro.cta || 'Like & Subscribe')}" onchange="updateField('cta', this.value)" placeholder="Like & Subscribe"></div>`;
-  html += `<div class="form-row"><label>Línea marca</label><input value="${esc(outro.brand_line || 'Hola西班牙语 · Un verbo al día')}" onchange="updateField('brand_line', this.value)" placeholder="Hola西班牙语 · Un verbo al día"></div>`;
+  html += `<div class="form-row"><label>CTA</label><input value="${esc(outro.cta || 'Like & Subscribe')}" onchange="updateField('cta', this.value)"></div>`;
+  html += `<div class="form-row"><label>Línea marca</label><input value="${esc(outro.brand_line || 'Hola西班牙语 · Un verbo al día')}" onchange="updateField('brand_line', this.value)"></div>`;
+  html += `<div class="form-row"><label>TTS ZH<span class="tts-label">🎤</span></label><input class="tts-field" value="${esc(outro.texto_tts_zh || '')}" onchange="updateField('outro_tts_zh', this.value)" placeholder="Auto: usa titulo_zh"></div>`;
   html += '</div>';
 
   document.getElementById('editor').innerHTML = html;
 
-  // Load first slide preview
   if (slides.length > 0) {
     loadPreview(currentSlideIdx);
   }
@@ -249,11 +262,22 @@ function updateField(field, value) {
   const slides = currentData.slides || [];
   const portada = slides.find(s => s.tipo === 'portada');
   const outro = slides.find(s => s.tipo === 'outro');
+  const conjSlide = slides.find(s => s.tipo === 'conjugacion');
 
   if (field === 'titulo_es' && portada) portada.titulo_es = value;
   if (field === 'titulo_zh' && portada) portada.titulo_zh = value;
+  if (field === 'badge' && portada) portada.badge = value;
+  if (field === 'capitulo_texto' && portada) portada.capitulo_texto = value;
+  if (field === 'texto_tts_zh' && portada) portada.texto_tts_zh = value;
+  if (field === 'conj_tts_zh' && conjSlide) conjSlide.texto_tts_zh = value;
+  if (field === 'ej_tts_es') {
+    slides.filter(s => s.tipo === 'ejemplo').forEach(s => s.texto_tts_es = value);
+  }
   if (field === 'outro_zh' && outro) outro.titulo_zh = value;
   if (field === 'outro_es' && outro) outro.titulo_es = value;
+  if (field === 'cta' && outro) outro.cta = value;
+  if (field === 'brand_line' && outro) outro.brand_line = value;
+  if (field === 'outro_tts_zh' && outro) outro.texto_tts_zh = value;
 }
 
 function updateConj() {
@@ -281,13 +305,32 @@ function updateEjemplo() {
   document.querySelectorAll('[data-ej]').forEach(el => {
     const i = parseInt(el.dataset.ej);
     const field = el.dataset.field;
-    if (!ejemplos[i]) {
-      // Need to create the ejemplo slide
-      ejemplos[i] = {tipo: 'ejemplo', tts: 'zh', frase_es: '', traduccion_zh: '', titulo_zh: `例句 ${i+1}`};
+    if (ejemplos[i]) {
+      if (field === 'es') ejemplos[i].frase_es = el.value;
+      if (field === 'zh') ejemplos[i].traduccion_zh = el.value;
     }
-    if (field === 'es') ejemplos[i].frase_es = el.value;
-    if (field === 'zh') ejemplos[i].traduccion_zh = el.value;
   });
+}
+
+function addEjemplo() {
+  if (!currentData) return;
+  const slides = currentData.slides || [];
+  slides.push({tipo: 'ejemplo', tts: 'es', frase_es: '', traduccion_zh: '', titulo_zh: ''});
+  renderEditor();
+}
+
+function removeEjemplo(idx) {
+  if (!currentData) return;
+  const slides = currentData.slides || [];
+  const ejemplos = slides.filter(s => s.tipo === 'ejemplo');
+  if (ejemplos.length <= 1) return toast('Mínimo 1 ejemplo');
+  // Find and remove from main slides array
+  const target = ejemplos[idx];
+  if (target) {
+    const realIdx = slides.indexOf(target);
+    if (realIdx >= 0) slides.splice(realIdx, 1);
+  }
+  renderEditor();
 }
 
 // ═══════════════════════════════════════════
@@ -299,49 +342,15 @@ async function saveVerbo() {
 
   document.getElementById('statusText').textContent = 'Guardando...';
 
-  // Build slides array from current data
-  const slides = [];
-  const d = currentData;
-
-  // Get portada fields
-  const portadaTitleEs = document.querySelector('[data-field]') ? null : null; // We'll use currentData
-
-  // Portada
-  slides.push({
-    tipo: 'portada', tts: 'zh',
-    titulo_es: currentData.slides?.find(s => s.tipo === 'portada')?.titulo_es || `Verbo ${currentVerbo.toUpperCase()}`,
-    titulo_zh: currentData.slides?.find(s => s.tipo === 'portada')?.titulo_zh || `动词 ${currentVerbo.toUpperCase()}`,
-    capitulo: currentData.frecuencia || 1,
-  });
-
-  // Conjugacion
-  const conjSlide = currentData.slides?.find(s => s.tipo === 'conjugacion') || {};
-  slides.push({
-    tipo: 'conjugacion', tts: 'zh',
-    titulo_zh: `${currentVerbo.toUpperCase()} · 现在时变位`,
-    verbo: currentVerbo,
-    tiempo: 'presente',
-    conjugacion: conjSlide.conjugacion || [],
-  });
-
-  // Ejemplos
-  const ejemplos = currentData.slides?.filter(s => s.tipo === 'ejemplo') || [];
-  for (let i = 0; i < 3; i++) {
-    const ej = ejemplos[i] || {};
-    slides.push({
-      tipo: 'ejemplo', tts: 'zh',
-      titulo_zh: `例句 ${i+1}`,
-      frase_es: ej.frase_es || '',
-      traduccion_zh: ej.traduccion_zh || '',
-    });
-  }
-
-  // Outro
-  const outroSlide = currentData.slides?.find(s => s.tipo === 'outro') || {};
-  slides.push({
-    tipo: 'outro', tts: 'zh',
-    titulo_zh: outroSlide.titulo_zh || `今天学了 ${currentVerbo.toUpperCase()}！`,
-    titulo_es: outroSlide.titulo_es || `¡Hoy aprendiste ${currentVerbo.toUpperCase()}!`,
+  // Build slides array from current data, preserving all fields
+  const slides = currentData.slides || [];
+  const slidesOut = slides.map(s => {
+    const out = {tipo: s.tipo, tts: s.tts || 'zh'};
+    // Copy all content fields
+    for (const [k, v] of Object.entries(s)) {
+      if (k !== 'tipo' && k !== 'tts') out[k] = v;
+    }
+    return out;
   });
 
   const payload = {
@@ -350,7 +359,7 @@ async function saveVerbo() {
     nivel: currentData.nivel || 'A1',
     frecuencia: currentData.frecuencia || 0,
     tipo_verbo: currentData.tipo || '',
-    slides: slides,
+    slides: slidesOut,
   };
 
   const res = await fetch(`/api/verbo/${currentVerbo}/save`, {

@@ -235,11 +235,28 @@ async def generate_verbo_video(verbo: str):
             "tipo": slide.tipo,
             "palabras": slide.get("palabras", []),
         }
+
+        # Fallback: fill TTS text from display fields
         if not sd["texto_tts_zh"].strip() and not sd["texto_tts_es"].strip():
-            if slide.tipo in ("portada", "conjugacion", "outro"):
+            if slide.tipo == "conjugacion":
+                # Build TTS from conjugation rows: word-by-word via vocabulario mode
+                conj = slide.get("conjugacion", [])
+                if conj:
+                    palabras = []
+                    for row in conj:
+                        persona = row.get("persona", "")
+                        forma = row.get("forma", "")
+                        if persona and forma:
+                            palabras.append({"es": f"{persona}: {forma}", "zh": row.get("pronombre", "")})
+                    if palabras:
+                        sd["palabras"] = palabras
+                        sd["texto_tts_es"] = "conjugacion"  # triggers ES TTS generation
+                        sd["tipo"] = "vocabulario"  # enables word-by-word mode
+            elif slide.tipo in ("portada", "outro"):
                 sd["texto_tts_zh"] = slide.get("titulo_zh", "")
             elif slide.tipo == "ejemplo":
                 sd["texto_tts_es"] = slide.get("frase_es", "")
+
         ap = await generate_slide_audio(sd, audio_dir, i)
         audio_paths.append(ap)
 
