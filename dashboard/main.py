@@ -19,6 +19,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import yaml
+import re
 from src.content_parser import parse_yaml, Slide
 from src.slide_renderer import render_slide, render_all_slides, render_xiaohongshu_portada
 from src.tts_engine import generate_slide_audio
@@ -244,16 +245,21 @@ async def generate_verbo_video(verbo: str):
                 if conj:
                     palabras = []
                     for row in conj:
-                        persona = row.get("persona", "")
+                        persona = row.get("persona", "").replace("/", ", ")
                         forma = row.get("forma", "")
                         if persona and forma:
-                            palabras.append({"es": f"{persona}: {forma}", "zh": row.get("pronombre", "")})
+                            palabras.append({"es": f"{persona}, {forma}", "zh": row.get("pronombre", "")})
                     if palabras:
                         sd["palabras"] = palabras
-                        sd["texto_tts_es"] = "conjugacion"  # triggers ES TTS generation
-                        sd["tipo"] = "vocabulario"  # enables word-by-word mode
+                        sd["texto_tts_es"] = "conjugacion"
+                        sd["tipo"] = "vocabulario"
             elif slide.tipo in ("portada", "outro"):
-                sd["texto_tts_zh"] = slide.get("titulo_zh", "")
+                raw = slide.get("titulo_zh", "") or ""
+                # Remove Spanish/Latin words so Chinese TTS doesn't mangle them
+                raw = re.sub(r'\b[A-Za-záéíóúüñÁÉÍÓÚÜÑ]+\b', '', raw)
+                raw = re.sub(r'[()（）]', '，', raw)
+                raw = re.sub(r'\s+', ' ', raw).strip()
+                sd["texto_tts_zh"] = raw
             elif slide.tipo == "ejemplo":
                 sd["texto_tts_es"] = slide.get("frase_es", "")
 
