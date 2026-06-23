@@ -249,16 +249,21 @@ def render_portada(slide):
     d = ImageDraw.Draw(img)
     _bg(d)
 
-    # Badge
+    # Badge — from slide data, fallback to BRAND
+    badge = slide.get("badge", f"{BRAND} · Verbos")
     bd = _font(FS["small"])
-    d.text((W - MX, MY), "Hola西班牙语 · Verbos",
+    d.text((W - MX, MY), badge,
            fill=CLR["gold"], font=bd, anchor="rt")
 
-    # Chapter number (below badge)
-    cap = slide.get("capitulo")
-    if cap:
+    # Chapter number (below badge) — from slide data
+    cap_text = slide.get("capitulo_texto", "")
+    if not cap_text:
+        cap = slide.get("capitulo")
+        if cap:
+            cap_text = f"第{cap:03d}课"
+    if cap_text:
         cf = _font(FS["brand"])
-        d.text((W - MX, MY + FS["small"] + 12), f"第{cap:03d}课",
+        d.text((W - MX, MY + FS["small"] + 12), cap_text,
                fill=CLR["gray"], font=cf, anchor="rt")
 
     # Spanish title — big, centered
@@ -581,7 +586,7 @@ def render_outro(slide):
     d = ImageDraw.Draw(img)
     _bg(d)
 
-    texto = slide.get("texto_zh", "")
+    texto = slide.get("texto_zh", slide.get("titulo_zh", ""))
     if texto:
         cf = _font(FS["hero_zh"])
         lines = _wrap_chars(texto, cf, CW)
@@ -591,11 +596,14 @@ def render_outro(slide):
             d.text((_cx(d, ln, cf), y), ln, fill=CLR["white"], font=cf)
             y += FS["hero_zh"] + LS["norm"]
 
+    cta = slide.get("cta", "Like & Subscribe")
     sf = _font(FS["body"])
-    d.text((W // 2, H // 2 + 60), "Like & Subscribe",
+    d.text((W // 2, H // 2 + 60), cta,
            fill=CLR["gray"], font=sf, anchor="mt")
+
+    brand_line = slide.get("brand_line", f"{BRAND} · Un verbo al día")
     d.text((W // 2, H - MB),
-           "Hola西班牙语 · Un verbo al día",
+           brand_line,
            fill=CLR["gray"], font=sf, anchor="mb")
     return img
 

@@ -133,6 +133,8 @@ function renderEditor() {
   html += '<h4>📔 Portada</h4>';
   html += `<div class="form-row"><label>Título ES</label><input value="${esc(portada.titulo_es || `Verbo ${d.verbo.toUpperCase()}`)}" onchange="updateField('titulo_es', this.value)"></div>`;
   html += `<div class="form-row"><label>Título ZH</label><input value="${esc(portada.titulo_zh || `动词 ${d.verbo.toUpperCase()}`)}" onchange="updateField('titulo_zh', this.value)"></div>`;
+  html += `<div class="form-row"><label>Badge</label><input value="${esc(portada.badge || 'Hola西班牙语 · Verbos')}" onchange="updateField('badge', this.value)" placeholder="Hola西班牙语 · Verbos"></div>`;
+  html += `<div class="form-row"><label>Capítulo</label><input value="${esc(portada.capitulo_texto || `第${String(d.capitulo || d.frecuencia || 1).padStart(3,'0')}课`)}" onchange="updateField('capitulo_texto', this.value)" placeholder="第001课"></div>`;
   html += '</div>';
 
   // ── Outro ──
@@ -141,6 +143,8 @@ function renderEditor() {
   html += '<h4>🏁 Outro</h4>';
   html += `<div class="form-row"><label>ZH</label><input value="${esc(outro.titulo_zh || `今天学了 ${d.verbo.toUpperCase()}！`)}" onchange="updateField('outro_zh', this.value)"></div>`;
   html += `<div class="form-row"><label>ES</label><input value="${esc(outro.titulo_es || `¡Hoy aprendiste ${d.verbo.toUpperCase()}!`)}" onchange="updateField('outro_es', this.value)"></div>`;
+  html += `<div class="form-row"><label>CTA</label><input value="${esc(outro.cta || 'Like & Subscribe')}" onchange="updateField('cta', this.value)" placeholder="Like & Subscribe"></div>`;
+  html += `<div class="form-row"><label>Línea marca</label><input value="${esc(outro.brand_line || 'Hola西班牙语 · Un verbo al día')}" onchange="updateField('brand_line', this.value)" placeholder="Hola西班牙语 · Un verbo al día"></div>`;
   html += '</div>';
 
   document.getElementById('editor').innerHTML = html;
