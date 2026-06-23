@@ -1,0 +1,92 @@
+nivel: A1
+modulo: 02_alfabeto
+tema: El alfabeto español
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: El alfabeto español
+  tts: zh
+  texto_tts_zh: 今天我们来学习。
+  texto_tts_es: El alfabeto español
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - '27 letras: A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z'
+  frase_es: Hola, me llamo Carlos. ¿Y tú?
+  traduccion_zh: 你好，我叫Carlos。你呢？
+  analisis:
+  - 'H不发音: o-la'
+  - 'LL发y: me-ya-mo'
+  tts: zh
+  texto_tts_zh: 27Ñ
+  texto_tts_es: Hola, me llamo Carlos. ¿Y tú?
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - H — 不发音（如：hola, hablar）
+  frase_es: El español es fácil.
+  traduccion_zh: 西班牙语很简单。
+  analisis:
+  - 'Ñ发ny: es-pa-nyol'
+  - 注意ñ在键盘上是单独的键
+  tts: zh
+  texto_tts_zh: 不发音（如：）
+  texto_tts_es: El español es fácil
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - LL — 发y音（如：llamar, pollo）
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 发音（如：）
+  texto_tts_es: LL y llamar, pollo
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - Ñ — 发ny音（如：español, año）
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: Ñ，发音（如：）
+  texto_tts_es: Ñ ny español, año
+- tipo: explicacion
+  titulo_zh: Punto 5
+  puntos:
+  - C — 在e/i前发s音
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 在前发音
+  texto_tts_es: C e i s
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: ¿Cómo se pronuncia "llamar"? a) lla-mar b) ya-mar c) la-mar
+  traduccion_zh: llamar怎么发音？
+  analisis:
+  - LL发y音 ✅
+  - lla-mar ❌ (英语式发音)
+  tts: es
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: ¿Cómo se pronuncia "llamar"? a) lla-mar b) ya-mar c) la-mar
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 27Ñ
+  - 不发音（如：）
+  - 发音（如：）
+  - Ñ，发音（如：）
+  tts: zh
+  texto_tts_zh: 27Ñ，不发音（如：），发音（如：），Ñ，发音（如：）
+  texto_tts_es: 'letras: A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z, H
+    hola, hablar, LL y llamar, pollo, Ñ ny español, año'
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana

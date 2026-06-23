@@ -1,0 +1,62 @@
+nivel: A1
+modulo: 24_la_ciudad
+tema: Dar direcciones
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Dar direcciones
+  titulo_es: Hola西班牙语 · A1 · Dar direcciones
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender a dar y pedir direcciones
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Sigue recto — 直走
+  - Gira a la derecha/izquierda — 右/左转
+  - Está al lado de / enfrente de / en la esquina
+  - ¿Está lejos? — No, está muy cerca.
+  tts: zh
+  texto_tts_zh: —直走，/—右/左转，//，?—,.
+- tipo: ejemplo
+  frase_es: — ¿Cómo llego al museo? — Sigue recto y gira a la derecha.
+  traduccion_zh: 去博物馆怎么走？直走然后右转。
+  analisis:
+  - Cómo llego a = 怎么到
+  - gira = 转（tú imperativo）
+  tts: es
+  texto_tts_es: — ¿Cómo llego al museo? — Sigue recto y gira a la derecha
+- tipo: ejemplo
+  frase_es: La farmacia está enfrente del banco.
+  traduccion_zh: 药店在银行对面。
+  analisis:
+  - enfrente de = 在...对面
+  - del = de + el
+  tts: es
+  texto_tts_es: La farmacia está enfrente del banco
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Ordena: gira a la derecha, sigue recto, está a la izquierda'
+  traduccion_zh: 排序：直走，右转，它在左边
+  analisis:
+  - 顺序：直走→转弯→位置
+  tts: es
+  texto_tts_es: 'Ordena: gira a la derecha, sigue recto, está a la izquierda'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - —直走
+  - /—右/左转
+  - ?—,.
+  tts: zh
+  texto_tts_zh: —直走，/—右/左转，?—,.
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

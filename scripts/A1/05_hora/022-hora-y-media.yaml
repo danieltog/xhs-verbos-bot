@@ -1,0 +1,64 @@
+nivel: A1
+modulo: 05_hora
+tema: La hora y media / y cuarto
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · La hora y media / y cuarto
+  titulo_es: Hola西班牙语 · A1 · La hora y media / y cuarto
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender a decir la hora con minutos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'Y media — 半 (ej: 2:30 → las dos y media)'
+  - 'Y cuarto — 一刻 (ej: 3:15 → las tres y cuarto)'
+  - 'Menos cuarto — 差一刻 (ej: 4:45 → las cinco menos cuarto)'
+  - 'Y [minutos] — ...分 (ej: 3:10 → las tres y diez)'
+  - 'Menos [minutos] — 差...分 (ej: 4:50 → las cinco menos diez)'
+  tts: zh
+  texto_tts_zh: —半(:2:30)，—一刻(:3:15)，—差一刻(:4:45)，[]—...分(:3:10)，[]—差...分(:4:50)
+- tipo: ejemplo
+  frase_es: Son las seis y media. Es hora de cenar.
+  traduccion_zh: 6点半了。该吃晚饭了。
+  analisis:
+  - y media = 半
+  - hora de cenar = 晚饭时间
+  tts: es
+  texto_tts_es: Son las seis y media. Es hora de cenar
+- tipo: ejemplo
+  frase_es: La clase empieza a las nueve menos cuarto.
+  traduccion_zh: 课在8点45开始。
+  analisis:
+  - a las = 在...点
+  - nueve menos cuarto = 差一刻9点
+  tts: es
+  texto_tts_es: La clase empieza a las nueve menos cuarto
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: ¿Qué hora es? 2:30 → Son las ____ y ____.
+  traduccion_zh: 2:30怎么说？
+  analisis:
+  - dos y media = 2点半
+  tts: es
+  texto_tts_es: '¿Qué hora es? : → Son las ____ y ____'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - —半(:2:30)
+  - —一刻(:3:15)
+  - —差一刻(:4:45)
+  - '[]—...分(:3:10)'
+  tts: zh
+  texto_tts_zh: —半(:2:30)，—一刻(:3:15)，—差一刻(:4:45)，[]—...分(:3:10)
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

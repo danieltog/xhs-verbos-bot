@@ -1,0 +1,81 @@
+nivel: A1
+modulo: 03_numeros
+tema: El precio
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: El precio
+  tts: zh
+  texto_tts_zh: 今天我们来学习。
+  texto_tts_es: El precio
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - ¿Cuánto cuesta? — 多少钱？（单数）
+  frase_es: — ¿Cuánto cuesta esto? — Cuesta 50 pesos.
+  traduccion_zh: 这个多少钱？50比索。
+  analisis:
+  - esto = 这个
+  - cuesta = 价格是（单数）
+  tts: zh
+  texto_tts_zh: 多少钱？（单数）
+  texto_tts_es: ¿Cuánto cuesta esto? Cuesta pesos
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - ¿Cuánto cuestan? — 多少钱？（复数）
+  frase_es: — ¿Cuánto cuestan los zapatos? — Cuestan 800 pesos.
+  traduccion_zh: 鞋子多少钱？800比索。
+  analisis:
+  - cuestan = 价格是（复数）
+  - 800 = ochocientos
+  tts: zh
+  texto_tts_zh: 多少钱？（复数）
+  texto_tts_es: ¿Cuánto cuestan los zapatos? Cuestan pesos
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - Cuesta / Cuestan — 价格是...
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 价格是
+  texto_tts_es: Cuesta Cuestan
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - 100 = cien / 101 = ciento uno
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: '100101'
+  texto_tts_es: = cien = ciento uno
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: 'Pregunta: ¿Cuánto ____ esto? (cuesta/cuestan)'
+  traduccion_zh: 填空：这个多少钱？
+  analisis:
+  - esto（这个）= 单数 → cuesta
+  tts: es
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: 'Pregunta: ¿Cuánto esto? (cuesta cuestan)'
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 多少钱？（单数）
+  - 多少钱？（复数）
+  - 价格是
+  - '100101'
+  tts: zh
+  texto_tts_zh: 多少钱？（单数），多少钱？（复数），价格是，100101
+  texto_tts_es: ¿Cuánto cuesta?, ¿Cuánto cuestan?, Cuesta Cuestan, = cien = ciento
+    uno
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana

@@ -1,0 +1,39 @@
+# ── Verbo #4: HACER ──
+modulo: verbos_frecuentes
+tema: "Verbo HACER"
+verbo: hacer
+traduccion_zh: 做 / 干
+nivel: A1
+frecuencia: 4
+tipo: irregular
+
+slides:
+  - tipo: portada
+    titulo_es: "Verbo HACER"
+    titulo_zh: "动词 HACER（做 / 干）"
+    capitulo: 4
+
+  - tipo: conjugacion
+    titulo_zh: "HACER · 现在时变位"
+    verbo: hacer
+    tiempo: "presente"
+    conjugacion: [{'persona': 'yo', 'pronombre': '我', 'forma': 'hago'}, {'persona': 'tú', 'pronombre': '你', 'forma': 'haces'}, {'persona': 'él/ella/usted', 'pronombre': '他/她/您', 'forma': 'hace'}, {'persona': 'nosotros/as', 'pronombre': '我们', 'forma': 'hacemos'}, {'persona': 'vosotros/as', 'pronombre': '你们', 'forma': 'hacéis'}, {'persona': 'ellos/ellas/ustedes', 'pronombre': '他们/她们/您们', 'forma': 'hacen'}]
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ①"
+    frase_es: "Hago la tarea"
+    traduccion_zh: "我做作业"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ②"
+    frase_es: "¿Qué haces hoy?"
+    traduccion_zh: "你今天做什么？"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ③"
+    frase_es: "Hacemos ejercicio juntos"
+    traduccion_zh: "我们一起锻炼"
+
+  - tipo: outro
+    titulo_zh: "今天学了 HACER！"
+    titulo_es: "¡Hoy aprendiste HACER!"

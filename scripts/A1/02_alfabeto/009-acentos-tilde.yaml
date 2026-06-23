@@ -1,0 +1,82 @@
+nivel: A1
+modulo: 02_alfabeto
+tema: Acentos y la tilde
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: Acentos y la tilde
+  tts: zh
+  texto_tts_zh: 今天我们来学习。
+  texto_tts_es: Acentos y la tilde
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - 以n/s/元音结尾 → 重音在倒数第二个音节
+  frase_es: ¿Cómo estás? ¿Dónde vives?
+  traduccion_zh: 你好吗？你住在哪里？
+  analisis:
+  - Cómo 和 Dónde 有重音，因为是疑问词
+  - Estás 的重音在最后一个音节
+  tts: zh
+  texto_tts_zh: 以元音结尾重音在倒数第二个音节
+  texto_tts_es: ¿Cómo estás? ¿Dónde vives?
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - 其他辅音结尾 → 重音在最后一个音节
+  frase_es: Sí, quiero café.
+  traduccion_zh: 是的，我想要咖啡。
+  analisis:
+  - Sí (有重音) = 是
+  - café (有重音) = 咖啡
+  tts: zh
+  texto_tts_zh: 其他辅音结尾重音在最后一个音节
+  texto_tts_es: Sí, quiero café
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - 疑问词都带重音：¿Qué? ¿Cómo? ¿Dónde?
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 疑问词都带重音：
+  texto_tts_es: ¿Qué? ¿Cómo? ¿Dónde?
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - Sí (是) vs Si (如果) — 重音改变意思
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 是如果，重音改变意思
+  texto_tts_es: Sí ( ) vs Si ( )
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: ¿Lleva tilde? a) casa b) café c) como
+  traduccion_zh: 哪些词有重音？
+  analisis:
+  - casa = 无重音（以元音结尾）
+  - café = 有重音（例外）
+  - cómo = 疑问词带重音
+  tts: es
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: ¿Lleva tilde? a) casa b) café c) como
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 以元音结尾重音在倒数第二个音节
+  - 其他辅音结尾重音在最后一个音节
+  - 疑问词都带重音：
+  - 是如果，重音改变意思
+  tts: zh
+  texto_tts_zh: 以元音结尾重音在倒数第二个音节，其他辅音结尾重音在最后一个音节，疑问词都带重音：，是如果，重音改变意思
+  texto_tts_es: n s →, →, ¿Qué? ¿Cómo? ¿Dónde?, Sí ( ) vs Si ( )
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana

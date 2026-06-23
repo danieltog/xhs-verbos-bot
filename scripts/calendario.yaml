@@ -1,0 +1,169 @@
+orden:
+- nivel: A1
+  modulo: 01_saludos
+  lecciones:
+  - 001-saludos-formales
+  - 002-presentaciones
+  - 003-preguntar-nacionalidad
+  - 004-numero-telefono
+  - 005-repaso-saludos
+- nivel: A1
+  modulo: 02_alfabeto
+  lecciones:
+  - 006-alfabeto-pronunciacion
+  - 007-vocales
+  - 008-consonantes-especiales
+  - 009-acentos-tilde
+  - 010-repaso-alfabeto
+- nivel: A1
+  modulo: 03_numeros
+  lecciones:
+  - 011-numeros-0-20
+  - 012-numeros-20-100
+  - 013-numeros-ordinales
+  - 014-la-edad
+  - 015-el-precio
+- nivel: A1
+  modulo: 04_dias_meses
+  lecciones:
+  - 016-dias-semana
+  - 017-meses-ano
+  - 018-las-fechas
+  - 019-las-estaciones
+  - 020-repaso-tiempo
+- nivel: A1
+  modulo: 05_hora
+  lecciones:
+  - 021-hora-en-punto
+  - 022-hora-y-media
+  - 023-hora-exacta
+  - 024-repaso-hora
+- nivel: A1
+  modulo: 06_articulos
+  lecciones:
+  - 025-articulo-determinado
+  - 026-articulo-indeterminado
+  - 027-contracciones-al-del
+  - 028-repaso-articulos
+- nivel: A1
+  modulo: 07_genero
+  lecciones:
+  - 029-masculino-femenino
+  - 030-excepciones-genero
+  - 031-genero-personas
+- nivel: A1
+  modulo: 08_plural
+  lecciones:
+  - 032-formacion-plural
+  - 033-concordancia
+  - 034-repaso-plural
+- nivel: A1
+  modulo: 09_presente_ar
+  lecciones:
+  - 035-intro-ar
+  - 036-conjugacion-hablar
+  - 037-otros-verbos-ar
+  - 038-repaso-verbos-ar
+- nivel: A1
+  modulo: 10_presente_er_ir
+  lecciones:
+  - 039-verbos-er
+  - 040-verbos-ir
+  - 041-comparacion-er-ir
+  - 042-repaso-er-ir
+- nivel: A1
+  modulo: 11_ser_estar
+  lecciones:
+  - 043-ser-caracteristicas
+  - 044-estar-estados
+  - 045-ser-vs-estar
+  - 046-repaso-ser-estar
+- nivel: A1
+  modulo: 12_verbos_irregulares
+  lecciones:
+  - 047-tener
+  - 048-hacer
+  - 049-ir
+  - 050-poder-querer
+  - 051-repaso-irregulares
+- nivel: A1
+  modulo: 13_vocabulario_familia
+  lecciones:
+  - 052-la-familia
+  - 053-colores
+  - 054-repaso-familia-colores
+- nivel: A1
+  modulo: 14_descripcion
+  lecciones:
+  - 055-descripcion-fisica
+  - 056-personalidad
+  - 057-repaso-descripcion
+- nivel: A1
+  modulo: 15_posesivos
+  lecciones:
+  - 058-posesivos-cortos
+  - 059-posesivos-largos
+  - 060-repaso-posesivos
+- nivel: A1
+  modulo: 16_demostrativos
+  lecciones:
+  - 061-este-esta-estos-estas
+  - 062-ese-aquel
+  - 063-repaso-demostrativos
+- nivel: A1
+  modulo: 17_gustar
+  lecciones:
+  - 064-gustar-intro
+  - 065-verbos-como-gustar
+  - 066-repaso-gustar
+- nivel: A1
+  modulo: 18_hay_esta
+  lecciones:
+  - 067-hay
+  - 068-estar-ubicacion
+  - 069-repaso-hay-estar
+- nivel: A1
+  modulo: 19_preposiciones
+  lecciones:
+  - 070-a-de-en
+  - 071-con-por-para
+  - 072-otras-preposiciones
+  - 073-repaso-preposiciones
+- nivel: A1
+  modulo: 20_preguntas_conectores
+  lecciones:
+  - 074-palabras-interrogativas
+  - 075-conectores
+  - 076-repaso-preguntas
+- nivel: A1
+  modulo: 21_frecuencia_rutina
+  lecciones:
+  - 077-adverbios-frecuencia
+  - 078-rutina-diaria
+  - 079-verbos-reflexivos
+  - 080-repaso-rutina
+- nivel: A1
+  modulo: 22_comida_restaurante
+  lecciones:
+  - 081-vocabulario-comida
+  - 082-pedir-en-restaurante
+  - 083-repaso-comida
+- nivel: A1
+  modulo: 23_la_casa
+  lecciones:
+  - 084-partes-casa
+  - 085-muebles
+  - 086-repaso-casa
+- nivel: A1
+  modulo: 24_la_ciudad
+  lecciones:
+  - 087-lugares-ciudad
+  - 088-dar-direcciones
+  - 089-medios-transporte
+  - 090-repaso-ciudad
+- nivel: A1
+  modulo: 25_repaso_general
+  lecciones:
+  - 091-repaso-gramatica
+  - 092-repaso-vocabulario
+dia_actual: 1

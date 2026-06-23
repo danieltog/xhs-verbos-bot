@@ -1,0 +1,63 @@
+nivel: A1
+modulo: 15_posesivos
+tema: Posesivos átonos (mi, tu, su...)
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Posesivos átonos (mi, tu, su...)
+  titulo_es: Hola西班牙语 · A1 · Posesivos átonos (mi, tu, su...)
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender los adjetivos posesivos cortos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - mi / tu / su — 不分阴阳性
+  - nuestro(a) / vuestro(a) — 配合名词
+  - mi casa (fem) / mi libro (masc)
+  - su = de él/ella/usted/ellos
+  tts: zh
+  texto_tts_zh: //—不分阴阳性，()/()—配合名词，()/()，=///
+- tipo: ejemplo
+  frase_es: Mi casa es pequeña pero muy bonita.
+  traduccion_zh: 我的房子小但很漂亮。
+  analisis:
+  - Mi = 我的
+  - pero = 但是
+  tts: es
+  texto_tts_es: Mi casa es pequeña pero muy bonita
+- tipo: ejemplo
+  frase_es: ¿Dónde está tu libro? — Está en mi mochila.
+  traduccion_zh: 你的书在哪里？在我的书包里。
+  analisis:
+  - tu libro = 你的书
+  - mi mochila = 我的书包
+  tts: es
+  texto_tts_es: ¿Dónde está tu libro? — Está en mi mochila
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Completa: ____ (mi/mis) padres viven en China.'
+  traduccion_zh: 我的父母住在中国。
+  analisis:
+  - padres (plural) → mis
+  tts: es
+  texto_tts_es: 'Completa: ____ (mi mis) padres viven en China'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - //—不分阴阳性
+  - ()/()—配合名词
+  - ()/()
+  - =///
+  tts: zh
+  texto_tts_zh: //—不分阴阳性，()/()—配合名词，()/()，=///
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

@@ -1,0 +1,9 @@
+# Core dependencies
+pillow>=10.0.0
+moviepy>=1.0.3
+edge-tts>=6.1.0
+pyyaml>=6.0
+numpy>=1.24.0
+
+# Optional: whisper for auto-subtitles (requires torch ~3GB)
+# openai-whisper>=20231117

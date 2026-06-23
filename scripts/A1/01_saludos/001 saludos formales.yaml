@@ -1,0 +1,161 @@
+nivel: A1
+tema: 001 Saludos Formales
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: Saludos formales e informales
+  puntos:
+  - ''
+  frase_es: ''
+  traduccion_zh: ''
+  analisis:
+  - ''
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 正式的和非正式的致敬
+  texto_tts_es: Saludos formales e informales
+  tts: zh
+- tipo: explicacion
+  titulo_zh: Punto 1
+  titulo_es: ''
+  puntos:
+  - Buenos días — 早上好（到中午12点）
+  frase_es: — ¡Buenos días! ¿Cómo está usted?
+  traduccion_zh: 早上好！您好吗？（正式）
+  analisis:
+  - Buenos días = 早上好
+  - usted = 您（正式）
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 早上好（到中午12点）
+  texto_tts_es: ¡Buenos días! ¿Cómo está usted?
+  tts: zh
+- tipo: explicacion
+  titulo_zh: Punto 2
+  titulo_es: ''
+  puntos:
+  - Buenas tardes — 下午好（到晚上8点）
+  frase_es: — ¡Hola! ¿Qué tal? — Muy bien, ¿y tú?
+  traduccion_zh: 你好！怎么样？非常好，你呢？
+  analisis:
+  - ¿y tú? = 你呢？（非正式）
+  - ¿y usted? = 您呢？（正式）
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 下午好（到晚上8点）
+  texto_tts_es: ¡Hola! ¿Qué tal? Muy bien, ¿y tú?
+  tts: zh
+- tipo: explicacion
+  titulo_zh: Punto 3
+  titulo_es: ''
+  puntos:
+  - Buenas noches — 晚上好 / 晚安
+  frase_es: Adiós, ¡hasta mañana!
+  traduccion_zh: 再见，明天见！
+  analisis:
+  - Hasta mañana = 明天见
+  - Hasta luego = 回头见
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 晚上好晚安
+  texto_tts_es: Adiós, ¡hasta mañana!
+  tts: zh
+- tipo: explicacion
+  titulo_zh: Punto 4
+  titulo_es: ''
+  puntos:
+  - Hola — 你好（任何时候）
+  frase_es: ''
+  traduccion_zh: ''
+  analisis:
+  - ''
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 你好（任何时候）
+  texto_tts_es: Hola
+  tts: zh
+- tipo: explicacion
+  titulo_zh: Punto 5
+  titulo_es: ''
+  puntos:
+  - ¿Qué tal? — 怎么样？
+  frase_es: ''
+  traduccion_zh: ''
+  analisis:
+  - ''
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 怎么样？
+  texto_tts_es: ¿Qué tal?
+  tts: zh
+- tipo: ejemplo
+  titulo_zh: ''
+  titulo_es: ''
+  puntos:
+  - ''
+  frase_es: «Hola y adiós son las primeras palabras que abren puertas.»
+  traduccion_zh: «Hola y adiós son las primeras palabras que abren puertas.»
+  analisis:
+  - ''
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 今天我们来学习一句西班牙语谚语。
+  texto_tts_es: Hola y adiós son las primeras palabras que abren puertas
+  tts: es
+- tipo: ejercicio
+  titulo_zh: 小练习
+  titulo_es: ''
+  puntos:
+  - ''
+  frase_es: 'Completa: Buenos ____, ¿cómo está ____?'
+  traduccion_zh: 填空：早上好，您好吗？
+  analisis:
+  - 'Opción: días / usted  ✅'
+  - 'No: tardes / tú ❌ (tardes = tarde)'
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: 'Completa: Buenos , ¿cómo está ?'
+  tts: es
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 早上好（到中午12点）
+  - 下午好（到晚上8点）
+  - 晚上好晚安
+  - 你好（任何时候）
+  frase_es: ''
+  traduccion_zh: ''
+  analisis:
+  - ''
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: ''
+  texto_tts_zh: 早上好（到中午12点），下午好（到晚上8点），晚上好晚安，你好（任何时候）
+  texto_tts_es: Buenos días, Buenas tardes, Buenas noches , Hola
+  tts: zh
+- tipo: outro
+  titulo_zh: ''
+  titulo_es: ''
+  puntos:
+  - ''
+  frase_es: ''
+  traduccion_zh: ''
+  analisis:
+  - ''
+  indefinido: ''
+  imperfecto: ''
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana
+  tts: zh

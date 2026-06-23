@@ -1,0 +1,49 @@
+nivel: A1
+modulo: 05_hora
+tema: 'Repaso: la hora'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Repaso: la hora'
+  titulo_es: 'Hola西班牙语 · A1 · Repaso: la hora'
+  tts: zh
+  texto_tts_zh: 今天我们复习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - 复习已学内容
+  - 做练习巩固知识
+  - 查漏补缺
+  tts: zh
+  texto_tts_zh: 今天我们复习之前学过的内容
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Es la una / Son las...
+  - y media / y cuarto / menos cuarto
+  - ¿A qué hora? — 在几点？
+  - De la mañana/tarde/noche
+  tts: zh
+  texto_tts_zh: /...，//，?—在几点？，//
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Escribe: 1:15pm, 6:30am, 11:45pm'
+  traduccion_zh: 写出：下午1:15，早上6:30，晚上11:45
+  analisis:
+  - 1:15 = y cuarto
+  - 6:30 = y media
+  - 11:45 = menos cuarto
+  tts: es
+  texto_tts_es: 'Escribe: :15pm, :30am, :45pm'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - /...
+  - ?—在几点？
+  tts: zh
+  texto_tts_zh: /...，?—在几点？
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

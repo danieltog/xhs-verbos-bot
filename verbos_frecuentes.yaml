@@ -1,0 +1,214 @@
+# ── Verbos españoles por frecuencia de uso ──
+# Fuente: Corpus de Referencia del Español Actual (CREA) + análisis de frecuencia
+# Ordenados del más frecuente al menos frecuente
+
+verbos:
+  - verbo: ser
+    traduccion: 是 / 在
+    tipo: irregular
+    frecuencia: 1
+    ejemplo: "Yo soy estudiante"
+    ejemplo_zh: "我是学生"
+
+  - verbo: estar
+    traduccion: 在 / 处于
+    tipo: irregular
+    frecuencia: 2
+    ejemplo: "Estoy en casa"
+    ejemplo_zh: "我在家"
+
+  - verbo: tener
+    traduccion: 有
+    tipo: irregular
+    frecuencia: 3
+    ejemplo: "Tengo un libro"
+    ejemplo_zh: "我有一本书"
+
+  - verbo: hacer
+    traduccion: 做 / 干
+    tipo: irregular
+    frecuencia: 4
+    ejemplo: "Hago la tarea"
+    ejemplo_zh: "我做作业"
+
+  - verbo: ir
+    traduccion: 去
+    tipo: irregular
+    frecuencia: 5
+    ejemplo: "Voy al supermercado"
+    ejemplo_zh: "我去超市"
+
+  - verbo: poder
+    traduccion: 能 / 可以
+    tipo: irregular
+    frecuencia: 6
+    ejemplo: "Puedo hablar español"
+    ejemplo_zh: "我会说西班牙语"
+
+  - verbo: decir
+    traduccion: 说 / 告诉
+    tipo: irregular
+    frecuencia: 7
+    ejemplo: "Digo la verdad"
+    ejemplo_zh: "我说实话"
+
+  - verbo: ver
+    traduccion: 看 / 看见
+    tipo: irregular
+    frecuencia: 8
+    ejemplo: "Veo la televisión"
+    ejemplo_zh: "我看电视"
+
+  - verbo: dar
+    traduccion: 给
+    tipo: irregular
+    frecuencia: 9
+    ejemplo: "Te doy un regalo"
+    ejemplo_zh: "我给你一个礼物"
+
+  - verbo: saber
+    traduccion: 知道 / 会
+    tipo: irregular
+    frecuencia: 10
+    ejemplo: "Sé la respuesta"
+    ejemplo_zh: "我知道答案"
+
+  - verbo: querer
+    traduccion: 想要 / 爱
+    tipo: irregular
+    frecuencia: 11
+    ejemplo: "Quiero aprender español"
+    ejemplo_zh: "我想学西班牙语"
+
+  - verbo: hablar
+    traduccion: 说 / 讲
+    tipo: regular (-ar)
+    frecuencia: 12
+    ejemplo: "Hablo español"
+    ejemplo_zh: "我说西班牙语"
+
+  - verbo: llegar
+    traduccion: 到达
+    tipo: regular (-ar)
+    frecuencia: 13
+    ejemplo: "Llego a las ocho"
+    ejemplo_zh: "我八点到"
+
+  - verbo: pasar
+    traduccion: 经过 / 度过
+    tipo: regular (-ar)
+    frecuencia: 14
+    ejemplo: "Paso por tu casa"
+    ejemplo_zh: "我经过你家"
+
+  - verbo: deber
+    traduccion: 应该
+    tipo: regular (-er)
+    frecuencia: 15
+    ejemplo: "Debo estudiar más"
+    ejemplo_zh: "我应该多学习"
+
+  - verbo: poner
+    traduccion: 放 / 放置
+    tipo: irregular
+    frecuencia: 16
+    ejemplo: "Pongo la mesa"
+    ejemplo_zh: "我摆桌子"
+
+  - verbo: creer
+    traduccion: 相信 / 认为
+    tipo: regular (-er)
+    frecuencia: 17
+    ejemplo: "Creo en ti"
+    ejemplo_zh: "我相信你"
+
+  - verbo: parecer
+    traduccion: 好像 / 似乎
+    tipo: regular (-er)
+    frecuencia: 18
+    ejemplo: "Pareces cansado"
+    ejemplo_zh: "你看起来很累"
+
+  - verbo: llevar
+    traduccion: 带 / 携带
+    tipo: regular (-ar)
+    frecuencia: 19
+    ejemplo: "Llevo una mochila"
+    ejemplo_zh: "我背着一个背包"
+
+  - verbo: dejar
+    traduccion: 留下 / 让
+    tipo: regular (-ar)
+    frecuencia: 20
+    ejemplo: "Dejo la llave aquí"
+    ejemplo_zh: "我把钥匙放在这里"
+
+  - verbo: seguir
+    traduccion: 继续 / 跟随
+    tipo: irregular (e→i)
+    frecuencia: 21
+    ejemplo: "Sigo estudiando"
+    ejemplo_zh: "我继续学习"
+
+  - verbo: encontrar
+    traduccion: 找到 / 遇见
+    tipo: irregular (o→ue)
+    frecuencia: 22
+    ejemplo: "Encuentro la solución"
+    ejemplo_zh: "我找到解决办法"
+
+  - verbo: llamar
+    traduccion: 打电话 / 叫
+    tipo: regular (-ar)
+    frecuencia: 23
+    ejemplo: "Te llamo mañana"
+    ejemplo_zh: "我明天给你打电话"
+
+  - verbo: venir
+    traduccion: 来
+    tipo: irregular (e→ie)
+    frecuencia: 24
+    ejemplo: "Vengo de China"
+    ejemplo_zh: "我从中国来"
+
+  - verbo: pensar
+    traduccion: 想 / 思考
+    tipo: irregular (e→ie)
+    frecuencia: 25
+    ejemplo: "Pienso en ti"
+    ejemplo_zh: "我想你"
+
+  - verbo: salir
+    traduccion: 出去 / 离开
+    tipo: irregular
+    frecuencia: 26
+    ejemplo: "Salgo a las cinco"
+    ejemplo_zh: "我五点出去"
+
+  - verbo: volver
+    traduccion: 回来 / 返回
+    tipo: irregular (o→ue)
+    frecuencia: 27
+    ejemplo: "Vuelvo a casa"
+    ejemplo_zh: "我回家"
+
+  - verbo: tomar
+    traduccion: 拿 / 喝
+    tipo: regular (-ar)
+    frecuencia: 28
+    ejemplo: "Tomo un café"
+    ejemplo_zh: "我喝一杯咖啡"
+
+  - verbo: conocer
+    traduccion: 认识 / 了解
+    tipo: irregular
+    frecuencia: 29
+    ejemplo: "Conozco a María"
+    ejemplo_zh: "我认识玛丽亚"
+
+  - verbo: vivir
+    traduccion: 住 / 生活
+    tipo: regular (-ir)
+    frecuencia: 30
+    ejemplo: "Vivo en Beijing"
+    ejemplo_zh: "我住在北京"

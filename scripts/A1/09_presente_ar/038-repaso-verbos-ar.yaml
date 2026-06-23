@@ -1,0 +1,47 @@
+nivel: A1
+modulo: 09_presente_ar
+tema: 'Repaso: verbos -AR'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Repaso: verbos -AR'
+  titulo_es: 'Hola西班牙语 · A1 · Repaso: verbos -AR'
+  tts: zh
+  texto_tts_zh: 今天我们复习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - 复习已学内容
+  - 做练习巩固知识
+  - 查漏补缺
+  tts: zh
+  texto_tts_zh: 今天我们复习之前学过的内容
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - yo -o / tú -as / él -a
+  - nosotros -amos / ellos -an
+  - ¡Practica todos los días!
+  tts: zh
+  texto_tts_zh: -/-/-，-/-，!
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Conjuga: Ellos ____ (escuchar) música. Yo ____ (tomar) café.'
+  traduccion_zh: 变位：他们听音乐。我喝咖啡。
+  analisis:
+  - escuchar→escuchan
+  - tomar→tomo
+  tts: es
+  texto_tts_es: 'Conjuga: Ellos ____ (escuchar) música. Yo ____ (tomar) café'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - -/-/-
+  - -/-
+  tts: zh
+  texto_tts_zh: -/-/-，-/-
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

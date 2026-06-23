@@ -1,0 +1,39 @@
+# ── Verbo #2: ESTAR ──
+modulo: verbos_frecuentes
+tema: "Verbo ESTAR"
+verbo: estar
+traduccion_zh: 在 / 处于
+nivel: A1
+frecuencia: 2
+tipo: irregular
+
+slides:
+  - tipo: portada
+    titulo_es: "Verbo ESTAR"
+    titulo_zh: "动词 ESTAR（在 / 处于）"
+    capitulo: 2
+
+  - tipo: conjugacion
+    titulo_zh: "ESTAR · 现在时变位"
+    verbo: estar
+    tiempo: "presente"
+    conjugacion: [{'persona': 'yo', 'pronombre': '我', 'forma': 'estoy'}, {'persona': 'tú', 'pronombre': '你', 'forma': 'estás'}, {'persona': 'él/ella/usted', 'pronombre': '他/她/您', 'forma': 'está'}, {'persona': 'nosotros/as', 'pronombre': '我们', 'forma': 'estamos'}, {'persona': 'vosotros/as', 'pronombre': '你们', 'forma': 'estáis'}, {'persona': 'ellos/ellas/ustedes', 'pronombre': '他们/她们/您们', 'forma': 'están'}]
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ①"
+    frase_es: "Estoy en casa"
+    traduccion_zh: "我在家"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ②"
+    frase_es: "El libro está en la mesa"
+    traduccion_zh: "书在桌子上"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ③"
+    frase_es: "Estamos muy contentos"
+    traduccion_zh: "我们很开心"
+
+  - tipo: outro
+    titulo_zh: "今天学了 ESTAR！"
+    titulo_es: "¡Hoy aprendiste ESTAR!"

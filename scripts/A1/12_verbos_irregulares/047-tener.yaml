@@ -1,0 +1,64 @@
+nivel: A1
+modulo: 12_verbos_irregulares
+tema: El verbo TENER
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · El verbo TENER
+  titulo_es: Hola西班牙语 · A1 · El verbo TENER
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender el verbo tener y sus usos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - tengo, tienes, tiene, tenemos, tienen
+  - 'Tener + edad: Tengo 25 años.'
+  - Tener hambre/sed/frío/calor/sueño/miedo
+  - Tener que + infinitivo = 必须
+  tts: zh
+  texto_tts_zh: 学习西班牙语，+:25.，/////，+=必须
+- tipo: ejemplo
+  frase_es: Tengo hambre. Vamos a comer.
+  traduccion_zh: 我饿了。我们去吃吧。
+  analisis:
+  - Tengo hambre = 我饿了
+  - Vamos a = 我们去（ir a）
+  tts: es
+  texto_tts_es: Tengo hambre. Vamos a comer
+- tipo: ejemplo
+  frase_es: Ella tiene que estudiar para el examen.
+  traduccion_zh: 她必须为考试学习。
+  analisis:
+  - tiene que = 必须
+  - examen = 考试
+  tts: es
+  texto_tts_es: Ella tiene que estudiar para el examen
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: Yo ____ (tener) dos hermanos. Él ____ (tener) 30 años.
+  traduccion_zh: 我有两个兄弟。他30岁。
+  analisis:
+  - yo→tengo
+  - él→tiene
+  tts: es
+  texto_tts_es: Yo ____ (tener) dos hermanos. Él ____ (tener) años
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - 学习西班牙语
+  - +:25.
+  - /////
+  - +=必须
+  tts: zh
+  texto_tts_zh: 学习西班牙语，+:25.，/////，+=必须
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

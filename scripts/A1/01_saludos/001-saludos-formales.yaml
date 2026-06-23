@@ -1,0 +1,161 @@
+nivel: A1
+modulo: 01_saludos
+tema: Saludos formales e informales
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: Saludos formales e informales
+  tts: zh
+  texto_tts_zh: 大家好，欢迎来到今天的西班牙语课堂。今天我们来学习：正式和非正式问候。准备好你的笔记本，我们开始吧。
+  texto_tts_es: Saludos formales e informales.
+  hook_zh: 每天5分钟 · 轻松学西语 · A1零基础友好
+  bullets:
+  - title: 零基础入门
+    sub: 从Hola开始
+    icon: book
+  - title: DELE官方标准
+    sub: A1全套课程
+    icon: target
+  - title: 每天更新
+    sub: 打卡学西语
+    icon: fire
+  cta: 点击收藏 · 开始你的西语之旅
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - Buenos días — 早上好（到中午12点）
+  frase_es: Buenos días
+  traduccion_zh: 早上好（到中午点）
+  analisis:
+  - Buenos días = 早上好
+  - usted = 您（正式）
+  tts: zh
+  texto_tts_zh: 第1个知识点：早上好（到中午12点）。请仔细听，然后跟我读。
+  texto_tts_es: Buenos días。Buenos días
+- tipo: vocabulario
+  frase_origen: Buenos días
+  palabras:
+  - es: Buenos
+    zh: 好的
+  - es: días
+    zh: 天/日子
+  tts: es
+  texto_tts_zh: 现在我们来逐词学习刚才的句子。请仔细听每个单词的发音，然后跟我读。
+  texto_tts_es: Buenos días
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - Buenas tardes — 下午好（到晚上8点）
+  frase_es: Buenas tardes
+  traduccion_zh: 下午好（到晚上点）
+  analisis: []
+  tts: zh
+  texto_tts_zh: 第2个知识点：下午好（到晚上8点）。请仔细听，然后跟我读。
+  texto_tts_es: Buenas tardes。Buenas tardes
+- tipo: vocabulario
+  frase_origen: Buenas tardes
+  palabras:
+  - es: Buenas
+    zh: 好的
+  - es: tardes
+    zh: 下午
+  tts: es
+  texto_tts_zh: 现在我们来逐词学习刚才的句子。请仔细听每个单词的发音，然后跟我读。
+  texto_tts_es: Buenas tardes
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - Buenas noches — 晚上好 / 晚安
+  frase_es: Buenas noches
+  traduccion_zh: 晚上好/晚安
+  analisis: []
+  tts: zh
+  texto_tts_zh: 第3个知识点：晚上好晚安。请仔细听，然后跟我读。
+  texto_tts_es: Buenas noches。Buenas noches
+- tipo: vocabulario
+  frase_origen: Buenas noches
+  palabras:
+  - es: Buenas
+    zh: 好的
+  - es: noches
+    zh: 晚上
+  tts: es
+  texto_tts_zh: 现在我们来逐词学习刚才的句子。请仔细听每个单词的发音，然后跟我读。
+  texto_tts_es: Buenas noches
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - Hola — 你好（任何时候）
+  frase_es: Hola
+  traduccion_zh: 你好（任何时候）
+  analisis: []
+  tts: zh
+  texto_tts_zh: 第4个知识点：你好（任何时候）。请仔细听，然后跟我读。
+  texto_tts_es: Hola。Hola
+- tipo: explicacion
+  titulo_zh: Punto 5
+  puntos:
+  - ¿Qué tal? — 怎么样？
+  frase_es: ¿Qué tal?
+  traduccion_zh: 怎么样
+  analisis: []
+  tts: zh
+  texto_tts_zh: 第5个知识点：怎么样？。请仔细听，然后跟我读。
+  texto_tts_es: ¿Qué tal?。¿Qué tal?
+- tipo: vocabulario
+  frase_origen: ¿Qué tal?
+  palabras:
+  - es: Qué
+    zh: 什么
+  - es: tal
+    zh: 如何
+  tts: es
+  texto_tts_zh: 现在我们来逐词学习刚才的句子。请仔细听每个单词的发音，然后跟我读。
+  texto_tts_es: Qué tal
+- tipo: ejemplo
+  frase_es: «Hola y adiós son las primeras palabras que abren puertas.»
+  traduccion_zh: «Hola y adiós son las primeras palabras que abren puertas.»
+  analisis: []
+  tts: es
+  texto_tts_zh: 今天我们来学习一句西班牙语谚语。请听好，然后跟我读。
+  texto_tts_es: Hola y adiós son las primeras palabras que abren puertas
+- tipo: ejemplo
+  frase_es: Repite lo aprendido
+  traduccion_zh: 跟我重复学过的内容
+  analisis:
+  - Buenos días
+  - Buenas tardes
+  - Buenas noches
+  - Hola
+  - ¿Qué tal?
+  tts: es
+  texto_tts_zh: 现在我们来练习。请跟我重复学过的内容。
+  texto_tts_es: Buenos días。Buenas tardes。Buenas noches。Hola。¿Qué tal?
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: 'Completa: Buenos ____, Buenas ____, Buenas ____'
+  traduccion_zh: 填空：早上好，下午好，晚上好
+  analisis:
+  - días = 天/日子
+  - tardes = 下午
+  - noches = 晚上
+  tts: es
+  texto_tts_zh: 现在，我们来做一个练习。请思考一下。
+  texto_tts_es: Buenos días, Buenas tardes, Buenas noches
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 早上好（到中午12点）
+  - 下午好（到晚上8点）
+  - 晚上好晚安
+  - 你好（任何时候）
+  tts: zh
+  texto_tts_zh: 好，我们来总结一下今天学的内容。早上好（到中午12点），下午好（到晚上8点），晚上好晚安，你好（任何时候）。如果你掌握了这些内容，恭喜你，你又进步了。
+  texto_tts_es: Buenos días, Buenas tardes, Buenas noches, Hola
+- tipo: outro
+  texto_zh: 喜欢这个视频吗？点赞和订阅是对我们最大的支持。Hola西班牙语陪你每天进步一点点。明天见！
+  tts: zh
+  texto_tts_zh: 喜欢这个视频吗？点赞和订阅是对我们最大的支持。陪你每天进步一点点。明天见！
+  texto_tts_es: ''

@@ -1,0 +1,61 @@
+nivel: A1
+modulo: 08_plural
+tema: 'Concordancia: sustantivo + adjetivo'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Concordancia: sustantivo + adjetivo'
+  titulo_es: 'Hola西班牙语 · A1 · Concordancia: sustantivo + adjetivo'
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender a concordar sustantivos con adjetivos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'Masc + Masc: libro rojo'
+  - 'Fem + Fem: casa roja'
+  - 'Plural + Plural: libros rojos'
+  - Adj一般放在名词后面
+  tts: zh
+  texto_tts_zh: +:，+:，+:，一般放在名词后面
+- tipo: ejemplo
+  frase_es: Tengo una casa blanca y un carro rojo.
+  traduccion_zh: 我有一栋白色的房子和一辆红色的车。
+  analisis:
+  - casa (fem) → blanca
+  - carro (masc) → rojo
+  tts: es
+  texto_tts_es: Tengo una casa blanca y un carro rojo
+- tipo: ejemplo
+  frase_es: Las flores amarillas son muy bonitas.
+  traduccion_zh: 黄色的花很漂亮。
+  analisis:
+  - flores (fem/pl) → amarillas, bonitas
+  - concordancia completa
+  tts: es
+  texto_tts_es: Las flores amarillas son muy bonitas
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Corrige: un casa blanco, una libro roja'
+  traduccion_zh: 改正：un casa blanco, una libro roja
+  analisis:
+  - casa=fem → una, blanca
+  - libro=masc → un, rojo
+  tts: es
+  texto_tts_es: 'Corrige: un casa blanco, una libro roja'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - 一般放在名词后面
+  tts: zh
+  texto_tts_zh: 一般放在名词后面
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

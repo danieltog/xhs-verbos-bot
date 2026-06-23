@@ -1,0 +1,62 @@
+nivel: A1
+modulo: 18_hay_esta
+tema: Estar para ubicaciones
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Estar para ubicaciones
+  titulo_es: Hola西班牙语 · A1 · Estar para ubicaciones
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Usar estar para decir dónde están las cosas
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Está a la derecha / izquierda
+  - Está al lado de / cerca de / lejos de
+  - Está en / sobre / debajo de / detrás de
+  - ¿Dónde está...? = ...在哪里？（已知事物）
+  tts: zh
+  texto_tts_zh: /，//，///，...?=...在哪里？（已知事物）
+- tipo: ejemplo
+  frase_es: El banco está a la derecha del supermercado.
+  traduccion_zh: 银行在超市的右边。
+  analisis:
+  - a la derecha de = 在...右边
+  - supermercado = 超市
+  tts: es
+  texto_tts_es: El banco está a la derecha del supermercado
+- tipo: ejemplo
+  frase_es: El gato está debajo de la mesa.
+  traduccion_zh: 猫在桌子下面。
+  analisis:
+  - debajo de = 在...下面
+  - gato = 猫
+  tts: es
+  texto_tts_es: El gato está debajo de la mesa
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Responde: ¿Dónde está la biblioteca? (cerca del parque)'
+  traduccion_zh: 图书馆在哪里？（在公园附近）
+  analisis:
+  - cerca del = cerca de + el
+  - parque = 公园
+  tts: es
+  texto_tts_es: 'Responde: ¿Dónde está la biblioteca? (cerca del parque)'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - ///
+  - '...?=...在哪里？（已知事物）'
+  tts: zh
+  texto_tts_zh: ///，...?=...在哪里？（已知事物）
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

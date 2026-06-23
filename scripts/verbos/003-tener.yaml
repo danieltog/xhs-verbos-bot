@@ -1,0 +1,39 @@
+# ── Verbo #3: TENER ──
+modulo: verbos_frecuentes
+tema: "Verbo TENER"
+verbo: tener
+traduccion_zh: 有
+nivel: A1
+frecuencia: 3
+tipo: irregular
+
+slides:
+  - tipo: portada
+    titulo_es: "Verbo TENER"
+    titulo_zh: "动词 TENER（有）"
+    capitulo: 3
+
+  - tipo: conjugacion
+    titulo_zh: "TENER · 现在时变位"
+    verbo: tener
+    tiempo: "presente"
+    conjugacion: [{'persona': 'yo', 'pronombre': '我', 'forma': 'tengo'}, {'persona': 'tú', 'pronombre': '你', 'forma': 'tienes'}, {'persona': 'él/ella/usted', 'pronombre': '他/她/您', 'forma': 'tiene'}, {'persona': 'nosotros/as', 'pronombre': '我们', 'forma': 'tenemos'}, {'persona': 'vosotros/as', 'pronombre': '你们', 'forma': 'tenéis'}, {'persona': 'ellos/ellas/ustedes', 'pronombre': '他们/她们/您们', 'forma': 'tienen'}]
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ①"
+    frase_es: "Tengo un libro"
+    traduccion_zh: "我有一本书"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ②"
+    frase_es: "Ella tiene 20 años"
+    traduccion_zh: "她20岁"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ③"
+    frase_es: "Tenemos una casa bonita"
+    traduccion_zh: "我们有一栋漂亮的房子"
+
+  - tipo: outro
+    titulo_zh: "今天学了 TENER！"
+    titulo_es: "¡Hoy aprendiste TENER!"

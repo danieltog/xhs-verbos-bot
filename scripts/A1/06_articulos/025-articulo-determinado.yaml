@@ -1,0 +1,64 @@
+nivel: A1
+modulo: 06_articulos
+tema: El artículo determinado (el, la, los, las)
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · El artículo determinado (el, la, los, las)
+  titulo_es: Hola西班牙语 · A1 · El artículo determinado (el, la, los, las)
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender los artículos definidos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - el — 阳性单数 (el libro)
+  - la — 阴性单数 (la mesa)
+  - los — 阳性复数 (los libros)
+  - las — 阴性复数 (las mesas)
+  - 用el/los指代整体类别：Los perros son animales.
+  tts: zh
+  texto_tts_zh: —阳性单数()，—阴性单数()，—阳性复数()，—阴性复数()，用/指代整体类别：.
+- tipo: ejemplo
+  frase_es: El libro está en la mesa.
+  traduccion_zh: 书在桌子上。
+  analisis:
+  - El libro = 那本书（特定）
+  - la mesa = 那张桌子
+  tts: es
+  texto_tts_es: El libro está en la mesa
+- tipo: ejemplo
+  frase_es: Los estudiantes están en la clase.
+  traduccion_zh: 学生们在教室里。
+  analisis:
+  - Los estudiantes = 那（些）学生
+  - la clase = 教室
+  tts: es
+  texto_tts_es: Los estudiantes están en la clase
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Completa: ____ casa es grande. (el/la)'
+  traduccion_zh: 填空：房子很大。
+  analisis:
+  - casa = 阴性 → la
+  tts: es
+  texto_tts_es: 'Completa: ____ casa es grande. (el la)'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - —阳性单数()
+  - —阴性单数()
+  - —阳性复数()
+  - —阴性复数()
+  tts: zh
+  texto_tts_zh: —阳性单数()，—阴性单数()，—阳性复数()，—阴性复数()
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

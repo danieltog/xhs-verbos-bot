@@ -1,0 +1,67 @@
+nivel: A1
+modulo: 21_frecuencia_rutina
+tema: Adverbios de frecuencia
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Adverbios de frecuencia
+  titulo_es: Hola西班牙语 · A1 · Adverbios de frecuencia
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Expresar la frecuencia de las acciones
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 100% → siempre, todos los días
+  - 75% → normalmente, generalmente
+  - 50% → a veces
+  - 25% → de vez en cuando
+  - 0% → nunca
+  tts: zh
+  texto_tts_zh: 100%，75%，50%，25%，0%
+- tipo: ejemplo
+  frase_es: Siempre tomo café por la mañana.
+  traduccion_zh: 我早上总是喝咖啡。
+  analisis:
+  - Siempre = 总是
+  - por la mañana = 早上
+  tts: es
+  texto_tts_es: Siempre tomo café por la mañana
+- tipo: ejemplo
+  frase_es: Nunca como carne. Soy vegetariano.
+  traduccion_zh: 我从来不吃肉。我是素食者。
+  analisis:
+  - Nunca = 从不（动词前）
+  - vegetariano = 素食者
+  tts: es
+  texto_tts_es: Nunca como carne. Soy vegetariano
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Ordena de más a menos: nunca, a veces, siempre, normalmente'
+  traduccion_zh: 从多到少排序
+  analisis:
+  - siempre=100%
+  - normalmente=75%
+  - a veces=50%
+  - nunca=0%
+  tts: es
+  texto_tts_es: 'Ordena de más a menos: nunca, a veces, siempre, normalmente'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - 100%
+  - 75%
+  - 50%
+  - 25%
+  tts: zh
+  texto_tts_zh: 100%，75%，50%，25%
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

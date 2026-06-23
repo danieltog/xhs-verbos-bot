@@ -1,0 +1,65 @@
+nivel: A1
+modulo: 13_vocabulario_familia
+tema: Los miembros de la familia
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Los miembros de la familia
+  titulo_es: Hola西班牙语 · A1 · Los miembros de la familia
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender el vocabulario de la familia
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Padre/madre — 父/母
+  - Hermano/hermana — 兄弟/姐妹
+  - Abuelo/abuela — 祖父/母
+  - Tío/tía — 叔伯/姑姨
+  - Primo/prima — 堂表兄弟/姐妹
+  - Hijo/hija — 儿子/女儿
+  tts: zh
+  texto_tts_zh: /—父/母，/—兄弟/姐妹，/—祖父/母，/—叔伯/姑姨，/—堂表兄弟/姐妹，/—儿子/女儿
+- tipo: ejemplo
+  frase_es: Mi madre se llama Ana. Mi padre se llama José.
+  traduccion_zh: 我妈妈叫Ana。我爸爸叫José。
+  analisis:
+  - Mi madre = 我的母亲
+  - se llama = 名叫
+  tts: es
+  texto_tts_es: Mi madre se llama Ana. Mi padre se llama José
+- tipo: ejemplo
+  frase_es: Tengo dos hermanos y una hermana.
+  traduccion_zh: 我有两个兄弟和一个姐妹。
+  analisis:
+  - dos hermanos = 两个兄弟
+  - una hermana = 一个姐妹
+  tts: es
+  texto_tts_es: Tengo dos hermanos y una hermana
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: ¿Quién es? La madre de mi madre es mi ____.
+  traduccion_zh: 我妈妈的妈妈是我的____
+  analisis:
+  - madre de mi madre = abuela（外婆）
+  tts: es
+  texto_tts_es: ¿Quién es? La madre de mi madre es mi ____
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - /—父/母
+  - /—兄弟/姐妹
+  - /—祖父/母
+  - /—叔伯/姑姨
+  tts: zh
+  texto_tts_zh: /—父/母，/—兄弟/姐妹，/—祖父/母，/—叔伯/姑姨
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

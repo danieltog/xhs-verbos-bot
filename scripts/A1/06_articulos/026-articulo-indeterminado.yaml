@@ -1,0 +1,64 @@
+nivel: A1
+modulo: 06_articulos
+tema: El artículo indeterminado (un, una, unos, unas)
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · El artículo indeterminado (un, una, unos, unas)
+  titulo_es: Hola西班牙语 · A1 · El artículo indeterminado (un, una, unos, unas)
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender los artículos indefinidos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'un — 一个 (阳性: un perro)'
+  - 'una — 一个 (阴性: una casa)'
+  - 'unos — 一些 (阳性: unos libros)'
+  - 'unas — 一些 (阴性: unas mesas)'
+  - Hay + un/una... — 有（一个）...
+  tts: zh
+  texto_tts_zh: —一个(阳性:)，—一个(阴性:)，—一些(阳性:)，—一些(阴性:)，+/...—有（一个）...
+- tipo: ejemplo
+  frase_es: Tengo un libro muy interesante.
+  traduccion_zh: 我有一本很有趣的书。
+  analisis:
+  - un libro = 一本书（非特定）
+  - muy interesante = 很有趣
+  tts: es
+  texto_tts_es: Tengo un libro muy interesante
+- tipo: ejemplo
+  frase_es: En la mesa hay unas manzanas.
+  traduccion_zh: 桌子上有一些苹果。
+  analisis:
+  - Hay = 有
+  - unas manzanas = 一些苹果
+  tts: es
+  texto_tts_es: En la mesa hay unas manzanas
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Completa: Necesito ____ lápiz. (un/una)'
+  traduccion_zh: 填空：我需要一支铅笔。
+  analisis:
+  - lápiz = 阳性 → un
+  tts: es
+  texto_tts_es: 'Completa: Necesito ____ lápiz. (un una)'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - —一个(阳性:)
+  - —一个(阴性:)
+  - —一些(阳性:)
+  - —一些(阴性:)
+  tts: zh
+  texto_tts_zh: —一个(阳性:)，—一个(阴性:)，—一些(阳性:)，—一些(阴性:)
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

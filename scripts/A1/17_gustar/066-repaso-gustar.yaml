@@ -1,0 +1,47 @@
+nivel: A1
+modulo: 17_gustar
+tema: 'Repaso: gustar y verbos similares'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Repaso: gustar y verbos similares'
+  titulo_es: 'Hola西班牙语 · A1 · Repaso: gustar y verbos similares'
+  tts: zh
+  texto_tts_zh: 今天我们复习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - 复习已学内容
+  - 做练习巩固知识
+  - 查漏补缺
+  tts: zh
+  texto_tts_zh: 今天我们复习之前学过的内容
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Me/te/le/nos/les + gusta/encanta + sg
+  - Me/te/le/nos/les + gustan/encantan + pl
+  - ¡Practica todos los días!
+  tts: zh
+  texto_tts_zh: ////+/+，////+/+，!
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Corrige: Me gusta los perros. Me encanta las flores.'
+  traduccion_zh: 改正这两句话
+  analisis:
+  - perros (pl) → gustan
+  - flores (pl) → encantan
+  tts: es
+  texto_tts_es: 'Corrige: Me gusta los perros. Me encanta las flores'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - ////+/+
+  - ////+/+
+  tts: zh
+  texto_tts_zh: ////+/+，////+/+
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

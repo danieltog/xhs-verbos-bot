@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Test Save</title>
+<style>body{font-family:sans-serif;max-width:600px;margin:40px auto;background:#111;color:#eee}label{display:block;margin:12px 0 4px;font-size:13px;color:#aaa}input,textarea{width:100%;padding:8px;background:#222;color:#fff;border:1px solid #444;border-radius:6px;font-size:14px}button{background:#e85d3a;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:15px;cursor:pointer;margin-top:12px}#status{margin-top:12px;padding:8px;border-radius:6px;font-size:13px}</style></head>
+<body>
+<h2>Test: Editar TTS Chino (Saludos formales)</h2>
+<p style="color:#888;font-size:13px">Esta pagina usa un form HTML tradicional. Si esto funciona, el problema esta en el JS del dashboard.</p>
+
+<form id="frm">
+<label>Slide 0 - Portada - texto_tts_zh:</label>
+<input name="slides[0][texto_tts_zh]" id="field" style="font-size:16px">
+<input type="hidden" name="slides[0][tipo]" value="portada">
+<input type="hidden" name="slides[0][tts]" value="zh">
+<button type="submit">GUARDAR</button>
+</form>
+<div id="status"></div>
+
+<script>
+// Load current value
+fetch('/api/leccion/01_saludos/001-saludos-formales')
+  .then(r => r.json())
+  .then(d => {
+    const s0 = d.slides?.[0];
+    if (s0) {
+      document.getElementById('field').value = s0.texto_tts_zh || '';
+      document.getElementById('status').textContent = 'Valor actual: ' + (s0.texto_tts_zh || '(vacio)');
+    }
+  });
+
+document.getElementById('frm').onsubmit = async (e) => {
+  e.preventDefault();
+  const status = document.getElementById('status');
+  status.textContent = 'Guardando...';
+  status.style.background = '#333';
+
+  const text = document.getElementById('field').value;
+  
+  // Build full slide data matching what the backend expects
+  const slides = [{
+    tipo: 'portada', tts: 'zh',
+    titulo_zh: 'Hola西班牙语 - A1', titulo_es: 'Saludos formales e informales',
+    puntos: [''], frase_es: '', traduccion_zh: '', analisis: [''],
+    indefinido: '', imperfecto: '', texto_zh: '',
+    texto_tts_zh: text, texto_tts_es: 'Saludos formales e informales'
+  }];
+
+  try {
+    const res = await fetch('/api/leccion/01_saludos/001-saludos-formales/save', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({modulo_slug:'01_saludos', leccion_slug:'001-saludos-formales', slides})
+    });
+    const data = await res.json();
+    if (res.ok) {
+      status.textContent = 'GUARDADO OK: ' + text;
+      status.style.background = '#2a4a2a';
+    } else {
+      status.textContent = 'ERROR: ' + JSON.stringify(data);
+      status.style.background = '#4a2a2a';
+    }
+  } catch(err) {
+    status.textContent = 'EXCEPCION: ' + err.message;
+    status.style.background = '#4a2a2a';
+  }
+};
+</script>
+</body></html>

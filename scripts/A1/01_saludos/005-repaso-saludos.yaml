@@ -1,0 +1,81 @@
+nivel: A1
+modulo: 01_saludos
+tema: 'Repaso: saludos y presentaciones'
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: 'Repaso: saludos y presentaciones'
+  tts: zh
+  texto_tts_zh: 今天我们复习。
+  texto_tts_es: 'Repaso: saludos y presentaciones'
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - Buenos días / Buenas tardes / Buenas noches
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: Buenos días Buenas tardes Buenas noches
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - Hola / ¿Qué tal? / ¿Cómo estás?
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: Hola ¿Qué tal? ¿Cómo estás?
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - Me llamo / Soy / Mucho gusto
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: Me llamo Soy Mucho gusto
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - ¿De dónde eres? / Soy de...
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: ¿De dónde eres? Soy de
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: ¿Qué dices a las 8 de la mañana? a) Buenas tardes b) Buenos días c) Buenas
+    noches
+  traduccion_zh: 早上8点你该说什么？
+  analisis:
+  - Buenos días = 早上（6am-12pm）
+  - Buenas tardes = 下午
+  - Buenas noches = 晚上
+  tts: es
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: ¿Qué dices a las de la mañana? a) Buenas tardes b) Buenos días c)
+    Buenas noches
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 学习西班牙语
+  - 学习西班牙语
+  - 学习西班牙语
+  - 学习西班牙语
+  tts: zh
+  texto_tts_zh: 学习西班牙语，学习西班牙语，学习西班牙语，学习西班牙语
+  texto_tts_es: Buenos días Buenas tardes Buenas noches, Hola ¿Qué tal? ¿Cómo estás?,
+    Me llamo Soy Mucho gusto, ¿De dónde eres? Soy de
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana

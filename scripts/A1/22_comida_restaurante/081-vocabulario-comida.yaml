@@ -1,0 +1,65 @@
+nivel: A1
+modulo: 22_comida_restaurante
+tema: Vocabulario de la comida
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Vocabulario de la comida
+  titulo_es: Hola西班牙语 · A1 · Vocabulario de la comida
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender vocabulario básico de alimentos
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Fruta, verdura, carne, pescado, pan, arroz
+  - Agua, jugo, café, té, leche, cerveza
+  - Desayuno / Almuerzo / Cena
+  - Rico, sabroso, dulce, salado, amargo, picante
+  tts: zh
+  texto_tts_zh: 学习西班牙语，学习西班牙语，//，学习西班牙语
+- tipo: ejemplo
+  frase_es: La paella es muy sabrosa.
+  traduccion_zh: 西班牙海鲜饭很好吃。
+  analisis:
+  - paella = 西班牙海鲜饭
+  - sabrosa = 美味的
+  tts: es
+  texto_tts_es: La paella es muy sabrosa
+- tipo: ejemplo
+  frase_es: ¿Quieres café o té? — Café, por favor.
+  traduccion_zh: 你想要咖啡还是茶？咖啡，谢谢。
+  analisis:
+  - ¿Quieres? = 你想要？(querer)
+  - por favor = 请/谢谢
+  tts: es
+  texto_tts_es: ¿Quieres café o té? — Café, por favor
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Clasifica: carne, leche, manzana, pescado, queso, arroz (origen animal
+    o vegetal)'
+  traduccion_zh: 分类：动物源还是植物源
+  analisis:
+  - 'origen animal: carne, leche...'
+  - 'origen vegetal: frutas, arroz'
+  tts: es
+  texto_tts_es: 'Clasifica: carne, leche, manzana, pescado, queso, arroz (origen animal
+    o vegetal)'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - 学习西班牙语
+  - 学习西班牙语
+  - 学习西班牙语
+  tts: zh
+  texto_tts_zh: 学习西班牙语，学习西班牙语，学习西班牙语
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

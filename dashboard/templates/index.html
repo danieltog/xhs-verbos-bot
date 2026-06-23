@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hola西班牙语 · DELE Video Bot</title>
+<style>
+  :root {
+    --bg: #0f0f1a; --surface: #1a1a2e; --surface2: #252545;
+    --accent: #e85d3a; --accent2: #2a9d8f; --accent3: #e9c46a;
+    --text: #eee; --text2: #888; --radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, 'Noto Sans SC', 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--text);
+    height: 100vh; display: flex; flex-direction: column; overflow: hidden;
+  }
+
+  .header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 20px; background: var(--surface);
+    border-bottom: 1px solid rgba(255,255,255,.06); flex-shrink: 0; z-index: 10;
+  }
+  .header .logo { font-size: 18px; font-weight: 800; background: linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header .badge { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--accent3); color: #111; font-weight: 700; }
+  .header .spacer { flex: 1; }
+  .header .status { font-size: 12px; color: var(--text2); }
+  .header .btn-gen {
+    background: linear-gradient(135deg,var(--accent),#c94d2e); color: #fff;
+    border: none; padding: 7px 20px; border-radius: 10px;
+    font-weight: 700; font-size: 13px; cursor: pointer; transition: all .2s;
+  }
+  .header .btn-gen:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(232,93,58,.3); }
+  .header .btn-gen:disabled { opacity: .4; cursor: wait; }
+  .header .btn-save { background: var(--surface2); color: var(--accent2); border: 1px solid rgba(255,255,255,.08); padding: 7px 16px; border-radius: 10px; font-size: 13px; cursor: pointer; }
+  .header .btn-save:hover { border-color: var(--accent2); }
+
+  .main { flex: 1; display: flex; overflow: hidden; }
+
+  /* ── Curriculum sidebar ── */
+  .sidebar { width: 280px; flex-shrink: 0; background: var(--surface); border-right: 1px solid rgba(255,255,255,.06); display: flex; flex-direction: column; }
+  .sidebar-header { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,.06); display: flex; justify-content: space-between; align-items: center; }
+  .sidebar-header span { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 1px; }
+  .sidebar-header .stats { font-size: 11px; color: var(--accent2); }
+  .sidebar-search { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .sidebar-search input { width:100%; background:var(--surface2); border:1px solid rgba(255,255,255,.08); color:var(--text); padding:6px 10px; border-radius:6px; font-size:12px; }
+
+  .modulo-list { flex: 1; overflow-y: auto; padding: 8px; }
+  .modulo-list::-webkit-scrollbar { width: 4px; }
+  .modulo-list::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 4px; }
+
+  .modulo { margin-bottom: 8px; }
+  .modulo-header {
+    display: flex; align-items: center; gap: 8px; padding: 8px 12px;
+    border-radius: 8px; cursor: pointer; font-size: 12px;
+    background: var(--surface2); transition: all .15s;
+  }
+  .modulo-header:hover { filter: brightness(1.2); }
+  .modulo-header .arrow { transition: transform .2s; font-size: 10px; }
+  .modulo-header .arrow.open { transform: rotate(90deg); }
+  .modulo-header .mod-title { flex: 1; font-weight: 600; }
+  .modulo-header .mod-count { font-size: 10px; color: var(--text2); background: rgba(255,255,255,.05); padding: 2px 8px; border-radius: 10px; }
+
+  .lecciones { padding-left: 8px; }
+  .leccion {
+    display: flex; align-items: center; gap: 8px; padding: 6px 12px;
+    margin: 2px 0; border-radius: 6px; cursor: pointer; font-size: 12px;
+    border-left: 3px solid transparent; transition: all .12s;
+  }
+  .leccion:hover { background: rgba(255,255,255,.04); }
+  .leccion.active { background: rgba(232,93,58,.12); border-left-color: var(--accent); }
+  .leccion .icon { font-size: 14px; width: 20px; text-align: center; }
+  .leccion .lec-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .leccion .lec-num { font-size: 10px; color: var(--text2); width: 24px; text-align: right; }
+  .leccion .lec-status { font-size: 12px; }
+  .leccion .lec-play { font-size: 11px; cursor: pointer; padding: 2px 6px; color: var(--accent2); border-radius: 4px; flex-shrink: 0; }
+  .leccion .lec-play:hover { background: rgba(255,255,255,.1); }
+  .leccion.video-done .lec-status { color: var(--accent2); }
+  .leccion.video-pending .lec-status { color: var(--text2); }
+
+  /* ── Form pane ── */
+  .form-pane { flex: 1; overflow-y: auto; padding: 20px 28px; min-width: 0; }
+  .form-pane::-webkit-scrollbar { width: 4px; }
+  .form-pane::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 4px; }
+
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; font-weight: 600; }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%; background: var(--surface2); border: 1px solid rgba(255,255,255,.08);
+    color: var(--text); padding: 8px 12px; border-radius: 8px; font-size: 13px;
+    font-family: inherit; transition: border-color .2s;
+  }
+  .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+  .form-group textarea { min-height: 50px; resize: vertical; }
+  .form-group textarea.code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; }
+
+  .slide-type-selector { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 14px; }
+  .slide-type-selector button {
+    padding: 4px 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,.1);
+    background: transparent; color: var(--text2); font-size: 11px; cursor: pointer;
+    transition: all .15s; font-weight: 600;
+  }
+  .slide-type-selector button:hover { border-color: var(--accent2); color: var(--accent2); }
+  .slide-type-selector button.active { background: var(--accent); color: #111; border-color: var(--accent); }
+
+  .array-input { display: flex; flex-direction: column; gap: 4px; }
+  .array-input .item { display: flex; gap: 4px; }
+  .array-input .item input { flex: 1; }
+  .array-input .item .rm { width: 28px; background: rgba(255,100,100,.12); color: var(--accent3); border: none; border-radius: 4px; cursor: pointer; }
+  .array-input .add { background: var(--surface2); color: var(--accent2); border: 1px dashed rgba(255,255,255,.1); padding: 4px; border-radius: 6px; cursor: pointer; font-size: 11px; text-align: center; }
+
+  /* ── Slide tabs ── */
+  .slide-tabs {
+    display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 16px;
+    padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .slide-tab {
+    padding: 4px 12px; border-radius: 6px; border: 1px solid transparent;
+    background: var(--surface2); color: var(--text2); font-size: 11px;
+    cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 4px;
+  }
+  .slide-tab:hover { border-color: rgba(255,255,255,.1); }
+  .slide-tab.active { background: rgba(232,93,58,.15); border-color: var(--accent); color: var(--text); }
+  .slide-tab .del-tab { font-size: 10px; color: var(--text2); margin-left: 4px; }
+  .slide-tab .del-tab:hover { color: var(--accent3); }
+  .slide-tab .add-tab { color: var(--accent2); font-weight: 700; }
+  .slide-tab .drag-handle { cursor: grab; font-size: 10px; color: var(--text2); margin-right: 2px; opacity: 0.5; }
+  .slide-tab .drag-handle:active { cursor: grabbing; }
+  .slide-tab.dragging { opacity: 0.4; cursor: grabbing; }
+  .slide-tab.drag-over { border-color: var(--accent2) !important; background: rgba(42,157,143,.15); }
+
+  .tts-toggle { display: flex; gap: 8px; margin-bottom: 12px; }
+  .tts-toggle label { display: flex; align-items: center; gap: 4px; font-size: 12px; cursor: pointer; }
+
+  /* ── Preview ── */
+  .preview-pane { width: 420px; flex-shrink: 0; background: #0a0a14; border-left: 1px solid rgba(255,255,255,.06); display: flex; flex-direction: column; align-items: center; padding: 16px; overflow-y: auto; }
+  .preview-label { font-size: 10px; color: var(--text2); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .phone-frame {
+    width: 360px; height: 640px; border-radius: 24px;
+    border: 3px solid var(--surface2); overflow: hidden;
+    background: #111; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow);
+  }
+  .phone-frame img { width: 100%; height: 100%; object-fit: cover; }
+  .phone-frame .placeholder { color: var(--text2); font-size: 14px; text-align: center; padding: 20px; }
+  .preview-meta { margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .preview-meta .stat { text-align: center; }
+  .preview-meta .stat .val { font-size: 14px; font-weight: 700; color: var(--accent); }
+  .preview-meta .stat .lbl { font-size: 9px; color: var(--text2); text-transform: uppercase; }
+  .preview-meta .video-label { font-size: 11px; color: var(--accent2); font-weight: 600; white-space: nowrap; }
+
+  /* ── Lesson info bar ── */
+  .lesson-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 6px 0; margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .lesson-bar .lesson-tema { font-weight: 700; }
+  .lesson-bar .lesson-info { color: var(--text2); font-size: 11px; }
+
+  /* ── Modal ── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.7);
+    display: none; align-items: center; justify-content: center;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal { background: var(--surface); border-radius: 16px; padding: 24px; max-width: 560px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+  .modal h2 { margin-bottom: 12px; font-size: 16px; }
+  .modal .progress-bar { height: 4px; background: var(--surface2); border-radius: 4px; margin: 12px 0; overflow: hidden; }
+  .modal .progress-bar .fill { height: 100%; background: linear-gradient(90deg,var(--accent),var(--accent2)); width: 0%; transition: width .3s; border-radius: 4px; }
+  .modal .log-area { background: #050510; border-radius: 8px; padding: 10px; font-size: 11px; font-family: 'SF Mono', monospace; max-height: 160px; overflow-y: auto; line-height: 1.6; }
+  .modal .log-area .ok { color: #4caf50; }
+  .modal .log-area .err { color: #ff6464; }
+  .modal .log-area .info { color: #50b4ff; }
+
+  /* ── Toast ── */
+  .toast { position: fixed; bottom: 20px; right: 20px; background: var(--surface); border: 1px solid rgba(255,255,255,.1); padding: 10px 20px; border-radius: 10px; font-size: 12px; box-shadow: var(--shadow); z-index: 200; display: none; animation: slideUp .3s ease; }
+  .toast.show { display: block; }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 1200px) { .preview-pane { width: 340px; } .phone-frame { width: 280px; height: 498px; } }
+  @media (max-width: 800px) { .preview-pane { display: none; } .sidebar { width: 220px; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <span class="logo">Hola西班牙语</span>
+  <span class="badge">A1</span>
+  <span class="badge" style="background:var(--surface2);color:var(--text2);-webkit-text-fill-color:var(--text2)">DELE</span>
+  <div class="spacer"></div>
+  <span class="status" id="statusText">Ninguna leccion cargada</span>
+  <button class="btn-save" id="saveBtn" onclick="saveCurrentLesson()" style="display:none">Guardar</button>
+  <button class="btn-gen" id="pipelineBtn" onclick="runFullPipeline()" style="background:linear-gradient(135deg,var(--accent2),#1a7a6a);color:#fff;display:none">🚀 Pipeline</button>
+  <button class="btn-gen" id="xhsBtn" onclick="generateXHSCover()" style="display:none;background:linear-gradient(135deg,#e8453c,#c0392b);color:#fff">📕 Portada XHS</button>
+  <button class="btn-gen" id="playBtn" onclick="replayVideo()" style="display:none;background:var(--surface2);color:var(--accent2);border:1px solid rgba(255,255,255,.08)">Ver video</button>
+  <button class="btn-gen" id="genBtn" onclick="generateVideo()">Generar Video</button>
+  <button class="btn-settings" onclick="toggleSettings()" title="Settings" style="background:var(--surface2);color:var(--text2);border:1px solid rgba(255,255,255,.1);padding:7px 12px;border-radius:10px;font-size:13px;cursor:pointer;margin-left:4px">Config</button>
+</div>
+
+<div class="main">
+  <!-- Curriculum sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <span>📚 Currículo A1</span>
+      <span class="stats" id="progressStats">0/0</span>
+    </div>
+    <div class="sidebar-search">
+      <input type="text" id="searchInput" placeholder="🔍 Buscar lección..." oninput="filterLecciones(this.value)">
+    </div>
+    <div class="modulo-list" id="modulo-list"></div>
+  </div>
+
+  <!-- Form -->
+  <div class="form-pane" id="formPane">
+    <div style="color:var(--text2);padding:60px;text-align:center">
+      <div style="font-size:48px;margin-bottom:12px">📚</div>
+      <div style="font-size:16px;margin-bottom:4px">Selecciona una lección</div>
+      <div style="font-size:12px">del currículo A1 para empezar</div>
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <div class="preview-pane">
+    <div class="preview-label">Vista previa</div>
+    <div class="phone-frame" id="phoneFrame">
+      <div class="placeholder">Previsualización<br>del slide actual</div>
+    </div>
+    <div class="preview-meta">
+      <div class="stat"><div class="val" id="slideNum">0</div><div class="lbl">Slides</div></div>
+      <div class="stat"><div class="val" id="estDur">0s</div><div class="lbl">Duración</div></div>
+      <div class="stat"><div class="val" id="estLang">-</div><div class="lbl">TTS</div></div>
+    </div>
+    <div id="xhsPreviewDesc" style="display:none;margin-top:12px;width:100%">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:10px;color:var(--accent3);font-weight:600;text-transform:uppercase;letter-spacing:.5px">📕 XHS Descripción</span>
+        <button onclick="copyXHSDescPreview()" style="background:var(--surface2);color:var(--accent2);border:1px solid rgba(255,255,255,.1);padding:2px 10px;border-radius:4px;font-size:10px;cursor:pointer">📋 Copiar</button>
+      </div>
+      <textarea id="xhsDescPreviewText" readonly style="width:100%;height:140px;background:var(--bg);color:var(--text);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:8px;font-size:10px;font-family:inherit;resize:none;line-height:1.5"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settingsModal" style="display:none">
+  <div class="modal" style="max-width:520px">
+    <h2 style="margin-bottom:16px">Configuracion de Slides</h2>
+    
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="form-group">
+        <label>Escala de fuente</label>
+        <input type="range" id="cfgFontScale" min="0.6" max="1.8" step="0.05" value="1.0" oninput="document.getElementById('cfgFontScaleVal').textContent=Math.round(this.value*100)+'%'">
+        <span id="cfgFontScaleVal" style="font-size:11px;color:var(--text2)">100%</span>
+      </div>
+      <div class="form-group">
+        <label>Escala de espaciado</label>
+        <input type="range" id="cfgSpacingScale" min="0.5" max="2.0" step="0.05" value="1.0" oninput="document.getElementById('cfgSpacingScaleVal').textContent=Math.round(this.value*100)+'%'">
+        <span id="cfgSpacingScaleVal" style="font-size:11px;color:var(--text2)">100%</span>
+      </div>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+      <div class="form-group">
+        <label>Color acento (gold)</label>
+        <input type="color" id="cfgColorGold" value="#ffc832">
+      </div>
+      <div class="form-group">
+        <label>Color azul</label>
+        <input type="color" id="cfgColorBlue" value="#50b4ff">
+      </div>
+      <div class="form-group">
+        <label>Fondo superior</label>
+        <input type="color" id="cfgBgTop" value="#0f121e">
+      </div>
+      <div class="form-group">
+        <label>Fondo inferior</label>
+        <input type="color" id="cfgBgBot" value="#1e1432">
+      </div>
+    </div>
+    
+    <div style="margin-top:12px;border-top:1px solid rgba(255,255,255,.06);padding-top:12px">
+      <label style="font-size:13px;color:var(--accent2);font-weight:600">Branding</label>
+      <div style="display:flex;gap:12px;margin-top:4px;align-items:end">
+        <div class="form-group" style="flex:1">
+          <label>Nombre de marca</label>
+          <input type="text" id="cfgBrandName" placeholder="Hola西班牙语" style="width:100%;padding:6px 10px;background:var(--surface2);color:var(--text);border:1px solid rgba(255,255,255,.1);border-radius:6px;font-size:13px">
+        </div>
+        <div class="form-group">
+          <label>Mostrar</label>
+          <input type="checkbox" id="cfgBrandShow" checked style="margin-top:6px">
+        </div>
+      </div>
+      <div style="margin-top:8px">
+        <label style="font-size:12px;color:var(--text2)">Logo (PNG, max 200x80 recomendado)</label>
+        <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
+          <input type="file" id="cfgLogoFile" accept="image/png,image/jpeg,image/webp" style="font-size:11px;color:var(--text2)">
+          <button onclick="uploadLogo()" style="background:var(--accent);color:#fff;border:none;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px">Subir</button>
+          <span id="cfgLogoStatus" style="font-size:10px;color:var(--accent2)"></span>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top:12px;border-top:1px solid rgba(255,255,255,.06);padding-top:12px">
+      <label style="font-size:12px;color:var(--text2)">Karaoke de palabras (experimental)</label>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:4px">
+        <input type="checkbox" id="cfgSubtitles">
+        <span style="font-size:11px;color:var(--text2)">Mostrar texto sincronizado con el audio</span>
+      </div>
+    </div>
+    
+    <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end">
+      <button onclick="saveSettings()" style="background:var(--accent);color:#fff;border:none;padding:8px 24px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600">Guardar Config</button>
+      <button onclick="toggleSettings()" style="background:var(--surface2);color:var(--text);border:none;padding:8px 24px;border-radius:8px;cursor:pointer;font-size:14px">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2 id="modalTitle">Generando video...</h2>
+    <div class="progress-bar"><div class="fill" id="progressFill"></div></div>
+    <div class="log-area" id="logArea"></div>
+    <div id="xhsDescSection" style="display:none;margin-top:16px">
+      <label style="font-size:13px;color:var(--accent3);font-weight:600">📕 Descripción para Xiaohongshu</label>
+      <textarea id="xhsDescText" readonly style="width:100%;height:180px;background:var(--bg);color:var(--text);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px;font-size:12px;font-family:inherit;resize:vertical;margin-top:6px"></textarea>
+      <button onclick="copyXHSDesc()" style="margin-top:8px;background:var(--accent2);color:#fff;border:none;padding:6px 18px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600">📋 Copiar descripción</button>
+      <span id="xhsCopyOk" style="display:none;margin-left:8px;color:#4caf50;font-size:11px">¡Copiado!</span>
+    </div>
+    <div style="margin-top:12px;text-align:right">
+      <a id="downloadLink" style="display:none;background:var(--accent);color:#fff;padding:7px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px" href="#">Descargar</a>
+      <button onclick="closeModal()" style="margin-left:6px;background:var(--surface2);color:var(--text);border:none;padding:7px 18px;border-radius:8px;cursor:pointer;font-size:13px">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/static/app.js?v=16"></script>
+</body>
+</html>

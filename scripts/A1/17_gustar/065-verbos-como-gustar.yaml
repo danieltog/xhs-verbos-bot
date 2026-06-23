@@ -1,0 +1,63 @@
+nivel: A1
+modulo: 17_gustar
+tema: Verbos como gustar
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Verbos como gustar
+  titulo_es: Hola西班牙语 · A1 · Verbos como gustar
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender verbos con la misma estructura
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'Encantar: Me encanta bailar.'
+  - 'Interesar: Me interesa la historia.'
+  - 'Doler: Me duele la cabeza. / Me duelen los pies.'
+  - 'Parecer: Me parece bien/mal/interesante.'
+  tts: zh
+  texto_tts_zh: :.，:.，:./.，://.
+- tipo: ejemplo
+  frase_es: Me encanta viajar por el mundo.
+  traduccion_zh: 我非常喜欢环游世界。
+  analisis:
+  - encanta = 非常喜欢
+  - viajar = 旅行
+  tts: es
+  texto_tts_es: Me encanta viajar por el mundo
+- tipo: ejemplo
+  frase_es: Me duele mucho la cabeza.
+  traduccion_zh: 我头很疼。
+  analisis:
+  - duele = 疼 (doler)
+  - la cabeza = 头
+  tts: es
+  texto_tts_es: Me duele mucho la cabeza
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: A ellos les ____ (encantar) los deportes. A mí me ____ (doler) la espalda.
+  traduccion_zh: 他们很喜欢运动。我背疼。
+  analisis:
+  - deportes (pl) → encantan
+  - espalda (sg) → duele
+  tts: es
+  texto_tts_es: A ellos les ____ (encantar) los deportes. A mí me ____ (doler) la
+    espalda
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - :./.
+  - ://.
+  tts: zh
+  texto_tts_zh: :./.，://.
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

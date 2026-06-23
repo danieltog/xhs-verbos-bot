@@ -1,0 +1,63 @@
+nivel: A1
+modulo: 23_la_casa
+tema: Las partes de la casa
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Las partes de la casa
+  titulo_es: Hola西班牙语 · A1 · Las partes de la casa
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender el vocabulario de la casa
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Cocina / Comedor / Salón / Dormitorio / Baño
+  - Pasillo / Escaleras / Garaje / Jardín / Balcón
+  - Vivo en... / Mi casa tiene...
+  tts: zh
+  texto_tts_zh: ////，////，.../...
+- tipo: ejemplo
+  frase_es: Mi casa tiene tres dormitorios y dos baños.
+  traduccion_zh: 我家有三间卧室和两个卫生间。
+  analisis:
+  - tres dormitorios = 三间卧室
+  - dos baños = 两个卫生间
+  tts: es
+  texto_tts_es: Mi casa tiene tres dormitorios y dos baños
+- tipo: ejemplo
+  frase_es: La cocina es grande y el salón es muy bonito.
+  traduccion_zh: 厨房很大，客厅很漂亮。
+  analisis:
+  - cocina = 厨房
+  - salón = 客厅
+  tts: es
+  texto_tts_es: La cocina es grande y el salón es muy bonito
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: ¿Dónde? Cocinas → ____. Duermes → ____. Te duchas → ____.
+  traduccion_zh: 在哪里？做饭→___。睡觉→___。洗澡→___。
+  analisis:
+  - cocinar→cocina
+  - dormir→dormitorio
+  - ducharse→baño
+  tts: es
+  texto_tts_es: ¿Dónde? Cocinas → ____. Duermes → ____. Te duchas → ____
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - ////
+  - ////
+  - '.../...'
+  tts: zh
+  texto_tts_zh: ////，////，.../...
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

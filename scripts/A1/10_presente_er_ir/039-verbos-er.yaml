@@ -1,0 +1,60 @@
+nivel: A1
+modulo: 10_presente_er_ir
+tema: Verbos regulares -ER
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Verbos regulares -ER
+  titulo_es: Hola西班牙语 · A1 · Verbos regulares -ER
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender a conjugar verbos -ER
+  tts: zh
+  texto_tts_zh: '-'
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - yo como / tú comes / él come
+  - nosotros comemos / ellos comen
+  - Comer, beber, leer, correr, aprender
+  tts: zh
+  texto_tts_zh: //，/，学习西班牙语
+- tipo: ejemplo
+  frase_es: Yo como frutas todos los días.
+  traduccion_zh: 我每天吃水果。
+  analisis:
+  - como = comer (yo)
+  - frutas = 水果
+  tts: es
+  texto_tts_es: Yo como frutas todos los días
+- tipo: ejemplo
+  frase_es: Ellos aprenden español en la escuela.
+  traduccion_zh: 他们在学校学西班牙语。
+  analisis:
+  - aprenden = aprender (ellos)
+  - escuela = 学校
+  tts: es
+  texto_tts_es: Ellos aprenden español en la escuela
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: Nosotros ____ (beber) agua. Tú ____ (leer) un libro.
+  traduccion_zh: 我们喝水。你读一本书。
+  analisis:
+  - beber→bebemos
+  - leer→lees
+  tts: es
+  texto_tts_es: Nosotros ____ (beber) agua. Tú ____ (leer) un libro
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - 学习西班牙语
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

@@ -1,0 +1,31 @@
+# ── Branding 动词西班牙语 ──
+canal: "动词西班牙语"
+eslogan: "Cada día un verbo, cada verbo un mundo"
+cta_zh: "每天一个动词，轻松掌握西班牙语！点赞关注不迷路~"
+cta_es: "¡Un verbo al día, español sin agonía!"
+
+# Paleta (vibrante, moderna — verbos = acción)
+colores:
+  primary: "#ff6b35"      # naranja vibrante
+  secondary: "#004e89"    # azul profundo
+  accent: "#f7c948"       # amarillo dorado
+  bg_start: "#0d1b2a"     # azul noche
+  bg_end: "#1b2838"       # azul acero oscuro
+  text: "#ffffff"
+  text_secondary: "#c0c8d0"
+
+# Voces TTS
+voces:
+  zh_explicacion: "zh-CN-XiaoxiaoNeural"    # Chino femenino, explicaciones
+  zh_alternativa: "zh-CN-YunxiNeural"       # Chino masculino
+
+  es_principal: "es-MX-DaliaNeural"         # Mexicano femenino
+  es_masculino: "es-MX-JorgeNeural"         # Mexicano masculino
+  es_peninsular: "es-ES-ElviraNeural"       # España femenino
+
+# Rotación de voces
+rotacion_voces:
+  - [es_principal, es_principal]           # video 1
+  - [es_masculino, es_masculino]           # video 2
+  - [es_peninsular, es_peninsular]         # video 3
+  - [es_principal, es_masculino]           # video 4

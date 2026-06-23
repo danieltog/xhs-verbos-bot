@@ -1,0 +1,61 @@
+nivel: A1
+modulo: 24_la_ciudad
+tema: Medios de transporte
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Medios de transporte
+  titulo_es: Hola西班牙语 · A1 · Medios de transporte
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Vocabulario de transporte y cómo moverse
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - Coche / Autobús / Metro / Tren / Avión / Barco
+  - Ir en + medio / Ir a pie
+  - Coger el autobús / el metro
+  - La parada / La estación / El billete
+  tts: zh
+  texto_tts_zh: /////，+/，/，//
+- tipo: ejemplo
+  frase_es: Voy al trabajo en metro. Tardo 20 minutos.
+  traduccion_zh: 我坐地铁上班。需要20分钟。
+  analisis:
+  - en metro = 坐地铁
+  - tardo = 花时间（tardar）
+  tts: es
+  texto_tts_es: Voy al trabajo en metro. Tardo minutos
+- tipo: ejemplo
+  frase_es: — ¿Cómo vas a la escuela? — Voy a pie.
+  traduccion_zh: 你怎么去学校？我步行去。
+  analisis:
+  - ¿Cómo vas? = 你怎么去？
+  - a pie = 步行
+  tts: es
+  texto_tts_es: — ¿Cómo vas a la escuela? — Voy a pie
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Completa con en/a: Voy ____ tren. Voy ____ pie.'
+  traduccion_zh: 用en或a填空
+  analisis:
+  - en + vehículo
+  - a pie (excepción)
+  tts: es
+  texto_tts_es: 'Completa con en a: Voy ____ tren. Voy ____ pie'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - /////
+  tts: zh
+  texto_tts_zh: /////
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

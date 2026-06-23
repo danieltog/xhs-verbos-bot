@@ -1,0 +1,67 @@
+nivel: A1
+modulo: 07_genero
+tema: Género en personas y profesiones
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1 · Género en personas y profesiones
+  titulo_es: Hola西班牙语 · A1 · Género en personas y profesiones
+  tts: zh
+  texto_tts_zh: 今天我们复习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - 复习已学内容
+  - 做练习巩固知识
+  - 查漏补缺
+  tts: zh
+  texto_tts_zh: 今天我们复习之前学过的内容
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - amigo → amiga
+  - profesor → profesora
+  - '-ista: el/la turista, el/la artista'
+  - 医生：el médico / la médica
+  - 固定阴性：la persona, la víctima
+  tts: zh
+  texto_tts_zh: 学习西班牙语，学习西班牙语，-:/,/，医生：/，固定阴性：
+- tipo: ejemplo
+  frase_es: Ella es profesora de español.
+  traduccion_zh: 她是西班牙语老师。
+  analisis:
+  - profesora = profesora (fem)
+  - de español = 西班牙语的
+  tts: es
+  texto_tts_es: Ella es profesora de español
+- tipo: ejemplo
+  frase_es: Mi amigo Luis es muy simpático.
+  traduccion_zh: 我的朋友Luis很友善。
+  analisis:
+  - amigo (masc)
+  - simpático = 友善的
+  tts: es
+  texto_tts_es: Mi amigo Luis es muy simpático
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Femenino de: profesor, amigo, estudiante, médico'
+  traduccion_zh: 写出阴性形式：profesor, amigo, estudiante, médico
+  analisis:
+  - profesor→profesora +a
+  - estudiante no cambia
+  tts: es
+  texto_tts_es: 'Femenino de: profesor, amigo, estudiante, médico'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos:
+  - 学习西班牙语
+  - 学习西班牙语
+  - -:/,/
+  - 医生：/
+  tts: zh
+  texto_tts_zh: 学习西班牙语，学习西班牙语，-:/,/，医生：/
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

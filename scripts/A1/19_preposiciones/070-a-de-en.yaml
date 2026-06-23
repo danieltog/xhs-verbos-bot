@@ -1,0 +1,63 @@
+nivel: A1
+modulo: 19_preposiciones
+tema: 'Preposiciones: a, de, en'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Preposiciones: a, de, en'
+  titulo_es: 'Hola西班牙语 · A1 · Preposiciones: a, de, en'
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Aprender las tres preposiciones más importantes
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'A: dirección, persona, hora'
+  - 'De: posesión, origen, materia'
+  - 'En: ubicación, medio, idioma, tiempo'
+  tts: zh
+  texto_tts_zh: ':，:，:'
+- tipo: ejemplo
+  frase_es: Voy a casa de María a las tres.
+  traduccion_zh: 我三点去María家。
+  analisis:
+  - a = dirección
+  - de = posesión (casa de María)
+  - a las = hora
+  tts: es
+  texto_tts_es: Voy a casa de María a las tres
+- tipo: ejemplo
+  frase_es: Estudio español en la escuela.
+  traduccion_zh: 我在学校学习西班牙语。
+  analisis:
+  - estudio = 学习
+  - en la escuela = 在学校
+  tts: es
+  texto_tts_es: Estudio español en la escuela
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Completa con a/de/en: Soy ____ China. Vivo ____ México. Voy ____ la escuela
+    ____ las ocho.'
+  traduccion_zh: 用a/de/en填空。
+  analisis:
+  - de=origen
+  - en=ubicación
+  - a=dirección, hora
+  tts: es
+  texto_tts_es: 'Completa con a de en: Soy ____ China. Vivo ____ México. Voy ____
+    la escuela ____ las ocho'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

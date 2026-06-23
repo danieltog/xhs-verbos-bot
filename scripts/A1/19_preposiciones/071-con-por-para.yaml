@@ -1,0 +1,60 @@
+nivel: A1
+modulo: 19_preposiciones
+tema: 'Preposiciones: con, por, para'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Preposiciones: con, por, para'
+  titulo_es: 'Hola西班牙语 · A1 · Preposiciones: con, por, para'
+  tts: zh
+  texto_tts_zh: 今天我们来学习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - Diferenciar con, por y para
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'Con: compañía, instrumento'
+  - 'Por: causa, medio, frecuencia, precio'
+  - 'Para: finalidad, destinatario, dirección'
+  - Por la mañana/tarde/noche
+  tts: zh
+  texto_tts_zh: :，:，:，//
+- tipo: ejemplo
+  frase_es: Este regalo es para ti.
+  traduccion_zh: 这个礼物是给你的。
+  analisis:
+  - para ti = 给你（destinatario）
+  - regalo = 礼物
+  tts: es
+  texto_tts_es: Este regalo es para ti
+- tipo: ejemplo
+  frase_es: Gracias por tu ayuda.
+  traduccion_zh: 谢谢你的帮助。
+  analisis:
+  - por = 因为（causa）
+  - ayuda = 帮助
+  tts: es
+  texto_tts_es: Gracias por tu ayuda
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: ¿Por o para? Gracias ____ venir. Esto es ____ ti.
+  traduccion_zh: 用por或para填空：谢谢你来。这是给你的。
+  analisis:
+  - por = 因为（原因）
+  - para = 给（目的/接收者）
+  tts: es
+  texto_tts_es: ¿Por o para? Gracias ____ venir. Esto es ____ ti
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

@@ -1,0 +1,46 @@
+nivel: A1
+modulo: 16_demostrativos
+tema: 'Repaso: demostrativos'
+duracion_segmento: 2.5
+slides:
+- tipo: portada
+  titulo_zh: 'Hola西班牙语 · A1 · Repaso: demostrativos'
+  titulo_es: 'Hola西班牙语 · A1 · Repaso: demostrativos'
+  tts: zh
+  texto_tts_zh: 今天我们复习西班牙语。
+- tipo: explicacion
+  titulo_zh: 🎯 今天的目标
+  puntos:
+  - 复习已学内容
+  - 做练习巩固知识
+  - 查漏补缺
+  tts: zh
+  texto_tts_zh: 今天我们复习之前学过的内容
+- tipo: explicacion
+  titulo_zh: 📖 知识点
+  puntos:
+  - 'Cerca: este, esta, estos, estas'
+  - 'Media: ese, esa, esos, esas'
+  - 'Lejos: aquel, aquella, aquellos, aquellas'
+  tts: zh
+  texto_tts_zh: ':，:，:'
+- tipo: ejercicio
+  titulo_zh: ✏️ 小练习
+  frase_es: 'Señala: (aquí) ____ mesa / (ahí) ____ silla / (allí) ____ ventana'
+  traduccion_zh: 指出：这里的桌子，那里的椅子，那边的窗户
+  analisis:
+  - aquí→esta
+  - ahí→esa
+  - allí→aquella
+  tts: es
+  texto_tts_es: 'Señala: (aquí) ____ mesa (ahí) ____ silla (allí) ____ ventana'
+- tipo: resumen
+  titulo_zh: 💡 总结
+  titulo_es: 💡 Resumen
+  puntos: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。

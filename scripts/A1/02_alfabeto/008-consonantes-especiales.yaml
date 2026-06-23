@@ -1,0 +1,93 @@
+nivel: A1
+modulo: 02_alfabeto
+tema: Consonantes especiales (C, G, J, R)
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: Consonantes especiales (C, G, J, R)
+  tts: zh
+  texto_tts_zh: 今天我们来学习。
+  texto_tts_es: Consonantes especiales (C, G, J, R)
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - C + a/o/u = [k] casa, comida
+  frase_es: Casa, cena, cine — tres palabras con C
+  traduccion_zh: 家、晚餐、电影院 — 三个带C的词
+  analisis:
+  - Casa = k音
+  - Cena = s音
+  - Cine = s音
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: Casa, cena, cine tres palabras con C
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - C + e/i = [s] cena, cine
+  frase_es: El perro de José come jamón.
+  traduccion_zh: José的狗在吃火腿。
+  analisis:
+  - perro = rr颤音
+  - José = J发h音
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: El perro de José come jamón
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - G + e/i = [j] gente
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: G + e i = [j] gente
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - J = [h] jamón, José
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: 学习西班牙语
+  texto_tts_es: J = [h] jamón, José
+- tipo: explicacion
+  titulo_zh: Punto 5
+  puntos:
+  - R vs RR = pero（但是）vs perro（狗）
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: （但是）（狗）
+  texto_tts_es: R vs RR = pero vs perro
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: ¿Cómo se dice "pero"? ¿Y "perro"?
+  traduccion_zh: '"pero"怎么说？"perro"呢？有什么区别？'
+  analisis:
+  - pero = 一个r，轻音
+  - perro = 两个r，颤音
+  tts: es
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: ¿Cómo se dice "pero"? ¿Y "perro"?
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - 学习西班牙语
+  - 学习西班牙语
+  - 学习西班牙语
+  - 学习西班牙语
+  tts: zh
+  texto_tts_zh: 学习西班牙语，学习西班牙语，学习西班牙语，学习西班牙语
+  texto_tts_es: C + a o u = [k] casa, comida, C + e i = [s] cena, cine, G + e i =
+    [j] gente, J = [h] jamón, José
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana

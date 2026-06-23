@@ -1,0 +1,81 @@
+nivel: A1
+modulo: 03_numeros
+tema: Números del 0 al 20
+duracion_segmento: 3.0
+slides:
+- tipo: portada
+  titulo_zh: Hola西班牙语 · A1
+  titulo_es: Números del 0 al 20
+  tts: zh
+  texto_tts_zh: 今天我们来学习。
+  texto_tts_es: Números del al
+- tipo: explicacion
+  titulo_zh: Punto 1
+  puntos:
+  - 0 cero / 1 uno / 2 dos / 3 tres / 4 cuatro
+  frase_es: Tengo 18 años. ¿Cuántos años tienes?
+  traduccion_zh: 我18岁。你几岁？
+  analisis:
+  - 18 = dieciocho
+  - años = 岁
+  tts: zh
+  texto_tts_zh: '01234'
+  texto_tts_es: Tengo años. ¿Cuántos años tienes?
+- tipo: explicacion
+  titulo_zh: Punto 2
+  puntos:
+  - 5 cinco / 6 seis / 7 siete / 8 ocho / 9 nueve / 10 diez
+  frase_es: El libro cuesta 15 euros.
+  traduccion_zh: 这本书15欧元。
+  analisis:
+  - 15 = quince
+  - euros = 欧元
+  tts: zh
+  texto_tts_zh: '5678910'
+  texto_tts_es: El libro cuesta euros
+- tipo: explicacion
+  titulo_zh: Punto 3
+  puntos:
+  - 11 once / 12 doce / 13 trece / 14 catorce / 15 quince
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: '1112131415'
+  texto_tts_es: once doce trece catorce quince
+- tipo: explicacion
+  titulo_zh: Punto 4
+  puntos:
+  - 16 dieciséis / 17 diecisiete / 18 dieciocho / 19 diecinueve / 20 veinte
+  frase_es: ''
+  traduccion_zh: ''
+  analisis: []
+  tts: zh
+  texto_tts_zh: '1617181920'
+  texto_tts_es: dieciséis diecisiete dieciocho diecinueve veinte
+- tipo: ejercicio
+  titulo_zh: 小练习
+  frase_es: 'Escribe en español: 7, 11, 15, 19'
+  traduccion_zh: 用西班牙语写出：7, 11, 15, 19
+  analisis:
+  - 7=siete, 11=once, 15=quince, 19=diecinueve
+  tts: es
+  texto_tts_zh: 现在，请做练习。
+  texto_tts_es: 'Escribe en español:'
+- tipo: resumen
+  titulo_zh: 总结
+  titulo_es: Resumen
+  puntos:
+  - '01234'
+  - '5678910'
+  - '1112131415'
+  - '1617181920'
+  tts: zh
+  texto_tts_zh: 01234，5678910，1112131415，1617181920
+  texto_tts_es: cero uno dos tres cuatro, cinco seis siete ocho nueve diez, once doce
+    trece catorce quince, dieciséis diecisiete dieciocho diecinueve veinte
+- tipo: outro
+  texto_zh: 如果这个视频对你有帮助，请点赞和订阅！这是我们工作的最大动力。明天见！
+  tts: zh
+  texto_tts_zh: 如果这个视频对你有帮助，请点赞和订阅。这是我们工作的最大动力。明天见。
+  texto_tts_es: Si este video te ayudó, dale like y suscríbete. Nos vemos mañana
