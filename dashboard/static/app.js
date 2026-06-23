@@ -4,6 +4,7 @@ let currentVerbo = null;
 let currentData = null;
 let currentSlideIdx = 0;
 let allVerbos = [];
+let currentView = 'slide';
 
 // ═══════════════════════════════════════════
 // INIT
@@ -58,6 +59,11 @@ async function selectVerbo(verbo) {
     currentData.has_script ? `Editando: ${verbo.toUpperCase()}` : `Nuevo: ${verbo.toUpperCase()} (sin script)`;
 
   renderEditor();
+
+  // Auto-load correct view
+  if (currentView === 'video' && currentData.has_video) {
+    loadVideo();
+  }
 }
 
 // ═══════════════════════════════════════════
@@ -174,6 +180,59 @@ async function loadPreview(idx) {
     document.getElementById('slideType').textContent = data.tipo;
   } catch (e) {
     document.getElementById('phoneFrame').innerHTML = '<div class="placeholder">Error</div>';
+  }
+}
+
+// ═══════════════════════════════════════════
+// VIEW TOGGLE
+// ═══════════════════════════════════════════
+
+function setView(view) {
+  currentView = view;
+  document.getElementById('viewSlideBtn').className = view === 'slide' ? 'active' : '';
+  document.getElementById('viewVideoBtn').className = view === 'video' ? 'active' : '';
+  document.getElementById('previewMeta').style.display = view === 'slide' ? 'flex' : 'none';
+  document.getElementById('videoMeta').style.display = view === 'video' ? 'flex' : 'none';
+
+  if (view === 'video') {
+    loadVideo();
+  } else if (currentData && currentData.slides && currentData.slides.length > 0) {
+    loadPreview(currentSlideIdx);
+  }
+}
+
+function loadVideo() {
+  if (!currentData || !currentData.has_video || !currentData.video_url) {
+    document.getElementById('phoneFrame').innerHTML =
+      '<div class="placeholder">No hay video generado<br><small style="color:var(--text2)">Generá el video primero</small></div>';
+    document.getElementById('videoSize').textContent = '-';
+    document.getElementById('videoDur').textContent = '-';
+    document.getElementById('videoDownload').href = '#';
+    return;
+  }
+
+  const url = currentData.video_url;
+  document.getElementById('phoneFrame').innerHTML = `
+    <video controls autoplay loop playsinline style="width:100%;height:100%;object-fit:cover;background:#000">
+      <source src="${url}" type="video/mp4">
+    </video>`;
+  document.getElementById('videoDownload').href = url;
+
+  // Try to get video metadata
+  const video = document.querySelector('#phoneFrame video');
+  if (video) {
+    video.onloadedmetadata = () => {
+      const mins = Math.floor(video.duration / 60);
+      const secs = Math.round(video.duration % 60);
+      document.getElementById('videoDur').textContent = `${mins}:${String(secs).padStart(2, '0')}`;
+    };
+    // Estimate size from API response
+    fetch(url, {method: 'HEAD'}).then(r => {
+      const size = parseInt(r.headers.get('content-length') || 0);
+      document.getElementById('videoSize').textContent = size > 1024*1024
+        ? `${(size/1024/1024).toFixed(1)} MB`
+        : `${Math.round(size/1024)} KB`;
+    }).catch(() => {});
   }
 }
 
@@ -355,9 +414,13 @@ async function generateVideo() {
       const listRes = await fetch('/api/verbos');
       allVerbos = await listRes.json();
       currentData.has_video = true;
+      currentData.video_url = data.video_url;
       document.getElementById('videoBadge').style.display = 'inline';
       renderVerboList();
       document.getElementById('statusText').textContent = `Video: ${currentVerbo.toUpperCase()}`;
+
+      // Auto-switch to video view
+      setView('video');
     } else {
       log.innerHTML += '\n<span class="err">❌ Error</span>';
     }
@@ -368,8 +431,9 @@ async function generateVideo() {
 
 function closeModal() {
   document.getElementById('modal').classList.remove('show');
-  // Refresh verbo list
   renderVerboList();
+  // Reload video if we're in video view
+  if (currentView === 'video') loadVideo();
 }
 
 // ═══════════════════════════════════════════

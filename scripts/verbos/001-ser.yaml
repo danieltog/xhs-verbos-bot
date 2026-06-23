@@ -1,54 +1,57 @@
-# ── Verbo #1: SER (el más frecuente en español) ──
 modulo: verbos_frecuentes
-tema: "Verbo SER"
+tema: Verbo SER
 verbo: ser
-traduccion_zh: 是 / 在
+traduccion_zh: ''
 nivel: A1
-frecuencia: 1
+frecuencia: 0
 dificultad: basico
-
+tipo: ''
 slides:
-  # ── Portada ──
-  - tipo: portada
-    titulo_es: "Verbo SER"
-    titulo_zh: "动词 SER（是/在）"
-    subtitulo: "El verbo más importante del español"
-    capitulo: 1
-
-  # ── Conjugación presente ──
-  - tipo: conjugacion
-    titulo_zh: "SER · 现在时变位"
-    verbo: ser
-    tiempo: "presente"
-    conjugacion:
-      - {persona: "yo", pronombre: "我", forma: "soy"}
-      - {persona: "tú", pronombre: "你", forma: "eres"}
-      - {persona: "él/ella/usted", pronombre: "他/她/您", forma: "es"}
-      - {persona: "nosotros/as", pronombre: "我们", forma: "somos"}
-      - {persona: "vosotros/as", pronombre: "你们", forma: "sois"}
-      - {persona: "ellos/ellas/ustedes", pronombre: "他们/她们/您们", forma: "son"}
-
-  # ── Ejemplo 1 ──
-  - tipo: ejemplo
-    titulo_zh: "例句 ①"
-    frase_es: "Yo soy estudiante"
-    traduccion_zh: "我是学生"
-
-  # ── Ejemplo 2 ──
-  - tipo: ejemplo
-    titulo_zh: "例句 ②"
-    frase_es: "Ella es profesora"
-    traduccion_zh: "她是老师"
-
-  # ── Ejemplo 3 ──
-  - tipo: ejemplo
-    titulo_zh: "例句 ③"
-    frase_es: "Nosotros somos amigos"
-    traduccion_zh: "我们是朋友"
-
-  # ── Cierre ──
-  - tipo: outro
-    titulo_zh: "今天学了 SER！"
-    titulo_es: "¡Hoy aprendiste SER!"
-    siguiente_verbo: estar
-    siguiente_zh: "下次：ESTAR"
+- tipo: portada
+  tts: zh
+  titulo_es: Verbo SER
+  titulo_zh: 动词 SER（是/在）
+  capitulo: 1
+- tipo: conjugacion
+  tts: zh
+  titulo_zh: SER · 现在时变位
+  verbo: ser
+  tiempo: presente
+  conjugacion:
+  - persona: yo
+    pronombre: 我
+    forma: soy
+  - persona: tú
+    pronombre: 你
+    forma: eres
+  - persona: él/ella/usted
+    pronombre: 他/她/您
+    forma: es
+  - persona: nosotros/as
+    pronombre: 我们
+    forma: somos
+  - persona: vosotros/as
+    pronombre: 你们
+    forma: sois
+  - persona: ellos/ellas/ustedes
+    pronombre: 他们/她们/您们
+    forma: son
+- tipo: ejemplo
+  tts: zh
+  titulo_zh: 例句 1
+  frase_es: Yo soy estudiante
+  traduccion_zh: 我是学生
+- tipo: ejemplo
+  tts: zh
+  titulo_zh: 例句 2
+  frase_es: Ella es profesora
+  traduccion_zh: 她是老师
+- tipo: ejemplo
+  tts: zh
+  titulo_zh: 例句 3
+  frase_es: Nosotros somos amigos
+  traduccion_zh: 我们是朋友
+- tipo: outro
+  tts: zh
+  titulo_zh: 今天学了 SER！
+  titulo_es: ¡Hoy aprendiste SER!
