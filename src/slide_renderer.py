@@ -644,8 +644,8 @@ def render_conjugacion(slide):
     gap = 10
 
     # Fonts
-    pf = _font(FS["body"])       # persona (Spanish)
-    zf = _font(FS["body_zh"])    # pronombre (Chinese)
+    pf = _font(FS["body_zh"])   # persona (smaller, fits long text like ellos/ellas/ustedes)
+    zf = _font(FS["small"])     # pronombre (Chinese, compact)
     ff = _font(FS["hero"])       # forma (conjugated verb, bigger)
 
     for i, entry in enumerate(conjugacion):
@@ -658,13 +658,13 @@ def render_conjugacion(slide):
 
         cy = y + row_h // 2
 
-        # Column widths: persona 25%, pronombre 25%, forma 50%
-        col1_w = int(CW * 0.28)
-        col2_w = int(CW * 0.28)
+        # Column widths: persona 38%, pronombre 22%, forma 40%
+        col1_w = int(CW * 0.38)
+        col2_w = int(CW * 0.22)
 
         # Persona (left)
         persona = entry.get("persona", "")
-        d.text((MX + 24, cy), persona, fill=CLR["white"], font=pf, anchor="lm")
+        d.text((MX + 20, cy), persona, fill=CLR["white"], font=pf, anchor="lm")
 
         # Pronombre (center area)
         pronombre = entry.get("pronombre", "")
@@ -674,11 +674,7 @@ def render_conjugacion(slide):
         # Forma (right, highlighted)
         forma = entry.get("forma", "")
         ff = _font(FS["hero"])
-        d.text((W - MX - 24, cy), forma, fill=CLR["gold"], font=ff, anchor="rm")
-
-        # Divider between columns (subtle)
-        div_x1 = MX + col1_w
-        div_x2 = div_x1 + col2_w
+        d.text((W - MX - 20, cy), forma, fill=CLR["gold"], font=ff, anchor="rm")
 
         y += row_h + gap
 
