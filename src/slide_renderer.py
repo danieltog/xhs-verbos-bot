@@ -644,29 +644,34 @@ def render_conjugacion(slide):
     gap = 10
 
     # Fonts
-    pf = _font(FS["body_zh"])   # persona (smaller, fits long text like ellos/ellas/ustedes)
-    zf = _font(FS["small"])     # pronombre (Chinese, compact)
+    pf = _font(FS["body"])       # persona (Spanish, restored)
+    zf = _font(FS["body_zh"])    # pronombre (Chinese)
     ff = _font(FS["hero"])       # forma (conjugated verb, bigger)
 
     for i, entry in enumerate(conjugacion):
         if y + row_h > H - MB:
             break
 
-        # Alternating card colors
         fill = CLR["card_blue"] if i % 2 == 0 else CLR["card_dark"]
         _card(d, MX, y, CW, row_h, radius=14, fill=fill)
 
         cy = y + row_h // 2
 
-        # Column widths: persona 38%, pronombre 22%, forma 40%
-        col1_w = int(CW * 0.38)
-        col2_w = int(CW * 0.22)
+        # Column widths: persona 30%, pronombre 24%, forma 46%
+        col1_w = int(CW * 0.30)
+        col2_w = int(CW * 0.24)
 
-        # Persona (left)
+        # Persona (left) — abbreviated for display
         persona = entry.get("persona", "")
-        d.text((MX + 20, cy), persona, fill=CLR["white"], font=pf, anchor="lm")
+        persona_abbr = {
+            "él/ella/usted": "él/ella/Ud.",
+            "ellos/ellas/ustedes": "ellos/ellas/Uds.",
+            "nosotros/as": "nosotros/as",
+            "vosotros/as": "vosotros/as",
+        }.get(persona, persona)
+        d.text((MX + 16, cy), persona_abbr, fill=CLR["white"], font=pf, anchor="lm")
 
-        # Pronombre (center area)
+        # Pronombre (center)
         pronombre = entry.get("pronombre", "")
         center_x = MX + col1_w + col2_w // 2
         d.text((center_x, cy), pronombre, fill=CLR["gray"], font=zf, anchor="mm")
@@ -674,7 +679,7 @@ def render_conjugacion(slide):
         # Forma (right, highlighted)
         forma = entry.get("forma", "")
         ff = _font(FS["hero"])
-        d.text((W - MX - 20, cy), forma, fill=CLR["gold"], font=ff, anchor="rm")
+        d.text((W - MX - 16, cy), forma, fill=CLR["gold"], font=ff, anchor="rm")
 
         y += row_h + gap
 

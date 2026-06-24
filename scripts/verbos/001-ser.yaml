@@ -1,57 +1,108 @@
+# ── Verbo #1: SER (el más frecuente en español) ──
 modulo: verbos_frecuentes
-tema: Verbo SER
+tema: "Verbo SER"
 verbo: ser
-traduccion_zh: ''
+traduccion_zh: 是 / 在
 nivel: A1
-frecuencia: 0
+frecuencia: 1
 dificultad: basico
-tipo: ''
+
 slides:
-- tipo: portada
-  tts: zh
-  titulo_es: Verbo SER
-  titulo_zh: 动词 SER（是/在）
-  capitulo: 1
-- tipo: conjugacion
-  tts: zh
-  titulo_zh: SER · 现在时变位
-  verbo: ser
-  tiempo: presente
-  conjugacion:
-  - persona: yo
-    pronombre: 我
-    forma: soy
-  - persona: tú
-    pronombre: 你
-    forma: eres
-  - persona: él/ella/usted
-    pronombre: 他/她/您
-    forma: es
-  - persona: nosotros/as
-    pronombre: 我们
-    forma: somos
-  - persona: vosotros/as
-    pronombre: 你们
-    forma: sois
-  - persona: ellos/ellas/ustedes
-    pronombre: 他们/她们/您们
-    forma: son
-- tipo: ejemplo
-  tts: zh
-  titulo_zh: 例句 1
-  frase_es: Yo soy estudiante
-  traduccion_zh: 我是学生
-- tipo: ejemplo
-  tts: zh
-  titulo_zh: 例句 2
-  frase_es: Ella es profesora
-  traduccion_zh: 她是老师
-- tipo: ejemplo
-  tts: zh
-  titulo_zh: 例句 3
-  frase_es: Nosotros somos amigos
-  traduccion_zh: 我们是朋友
-- tipo: outro
-  tts: zh
-  titulo_zh: 今天学了 SER！
-  titulo_es: ¡Hoy aprendiste SER!
+  - tipo: portada
+    titulo_es: "Verbo SER"
+    titulo_zh: "动词：是，在"
+    badge: "Hola西班牙语 · Verbos"
+    capitulo: 1
+
+  - tipo: conjugacion
+    titulo_zh: "SER · 现在时变位"
+    verbo: ser
+    tiempo: "presente"
+    conjugacion:
+      - {persona: "yo", pronombre: "我", forma: "soy"}
+      - {persona: "tú", pronombre: "你", forma: "eres"}
+      - {persona: "él/ella/usted", pronombre: "他/她/您", forma: "es"}
+      - {persona: "nosotros/as", pronombre: "我们", forma: "somos"}
+      - {persona: "vosotros/as", pronombre: "你们", forma: "sois"}
+      - {persona: "ellos/ellas/ustedes", pronombre: "他们/她们/您们", forma: "son"}
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ① · yo"
+    frase_es: "Yo soy estudiante de español"
+    traduccion_zh: "我是西班牙语学生"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ② · yo"
+    frase_es: "Yo soy de México"
+    traduccion_zh: "我来自墨西哥"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ③ · tú"
+    frase_es: "Tú eres muy inteligente"
+    traduccion_zh: "你很聪明"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ④ · él"
+    frase_es: "Él es mi profesor"
+    traduccion_zh: "他是我的老师"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑤ · ella"
+    frase_es: "Ella es doctora"
+    traduccion_zh: "她是医生"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑥ · usted"
+    frase_es: "¿Usted es el gerente?"
+    traduccion_zh: "您是经理吗？"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑦ · nosotros"
+    frase_es: "Nosotros somos amigos desde niños"
+    traduccion_zh: "我们从小就是朋友"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑧ · nosotras"
+    frase_es: "Nosotras somos hermanas"
+    traduccion_zh: "我们是姐妹"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑨ · vosotros"
+    frase_es: "Vosotros sois muy amables"
+    traduccion_zh: "你们很友善"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑩ · ellos"
+    frase_es: "Ellos son de España"
+    traduccion_zh: "他们来自西班牙"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑪ · ellas"
+    frase_es: "Ellas son estudiantes"
+    traduccion_zh: "她们是学生"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑫ · ustedes"
+    frase_es: "¿Ustedes son los nuevos vecinos?"
+    traduccion_zh: "你们是新邻居吗？"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑬"
+    frase_es: "Hoy es lunes"
+    traduccion_zh: "今天是星期一"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑭"
+    frase_es: "La casa es grande y bonita"
+    traduccion_zh: "房子又大又漂亮"
+
+  - tipo: ejemplo
+    titulo_zh: "例句 ⑮"
+    frase_es: "Somos un equipo"
+    traduccion_zh: "我们是一个团队"
+
+  - tipo: outro
+    titulo_zh: "今天学了 SER！"
+    titulo_es: "¡Hoy aprendiste SER!"
+    cta: "Like & Subscribe"
+    brand_line: "Hola西班牙语 · Un verbo al día"

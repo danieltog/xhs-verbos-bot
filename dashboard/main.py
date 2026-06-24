@@ -270,6 +270,26 @@ async def generate_verbo_video(verbo: str):
         ap = await generate_slide_audio(sd, audio_dir, i)
         audio_paths.append(ap)
 
+    # 2.5 Add 3s buffer silence after each slide
+    import subprocess as _sp
+    post_silence = audio_dir / "post_silence.mp3"
+    _sp.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono",
+             "-t", "3.0", "-c:a", "libmp3lame", "-q:a", "2", str(post_silence)],
+            check=True, capture_output=True)
+    buffered_audio = []
+    for i, ap in enumerate(audio_paths):
+        if ap is None: continue
+        padded = audio_dir / f"slide_{i:03d}_padded.mp3"
+        concat_list = audio_dir / f"pad_{i:03d}_list.txt"
+        with open(concat_list, "w") as f:
+            f.write(f"file '{ap.resolve()}'\n")
+            f.write(f"file '{post_silence.resolve()}'\n")
+        _sp.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat_list),
+                 "-c", "copy", str(padded)], check=True, capture_output=True)
+        buffered_audio.append(padded)
+        concat_list.unlink(missing_ok=True)
+    audio_paths = buffered_audio
+
     # 3. Compose video
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     video_path = OUTPUT_DIR / f"{script.filename_base}.mp4"
